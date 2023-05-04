@@ -467,7 +467,7 @@ public class Calc extends javax.swing.JFrame {
             String lastNum = result.getText().replaceAll(".*[\\+\\-/\\*\\)]+", "");
             if(lastNum.matches(".*\\..*") && button.getText().equals("."))
                 return;
-            if(lastNum.matches(".*[\\+\\-\\*/\\(]") && button.getText().equals("%") || (button.getText().equals(")")))
+            if(lastNum.matches(".*[\\+\\-\\*/\\(]") && (button.getText().equals("%") || button.getText().equals(")")))
                 return;
             if(result.getText().matches(".*(\\d|\\))$") && button.getText().equals("("))
                 result.setText(result.getText().concat("*"));
