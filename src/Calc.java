@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
 /**
  *
@@ -501,7 +497,8 @@ public class Calc extends javax.swing.JFrame {
     }
         
     private void buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPress
-        if(evt.getSource() instanceof javax.swing.JButton button){
+        if(evt.getSource() instanceof javax.swing.JButton){
+            javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
             if(validateButtonAction(button))
                 result.setText(result.getText().concat(button.getText()));
         }
@@ -514,7 +511,8 @@ public class Calc extends javax.swing.JFrame {
     }//GEN-LAST:event_clearAllActionPerformed
 
     private void operatorAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operatorAction
-        if(evt.getSource() instanceof javax.swing.JButton button){
+        if(evt.getSource() instanceof javax.swing.JButton){
+            javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
             String resultText = result.getText();
             String buttonText = button.getText();
             if(resultText.matches(".*\\([\\*\\-\\+\\/]*$") && !buttonText.equals("-"))
