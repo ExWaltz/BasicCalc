@@ -25,62 +25,98 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="result" alignment="0" min="-2" pref="294" max="-2" attributes="0"/>
+                  <Component id="result" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="clearAll" min="-2" pref="144" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="delete" min="-2" pref="146" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="openParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="closeParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="percent" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="divide" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="seven" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="eight" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="nine" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="multiply" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="one" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="two" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="three" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="plus" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="four" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="five" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="six" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="minus" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="decimal" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="zero" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="negation" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="equals" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="decimal" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="zero" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="negation" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="one" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="two" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="three" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="four" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="five" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="six" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="seven" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="eight" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="nine" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="multiply" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="minus" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="plus" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="equals" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="openParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="closeParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="percent" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="divide" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="four2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="one2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="decimal2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="seven2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="four1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="seven1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="decimal1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="one1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="openParentesis1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="clearAll" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="openParentesis2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="delete" linkSize="10" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,45 +125,61 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="result" min="-2" pref="51" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="delete" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="clearAll" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="delete" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="clearAll" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="one1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="decimal1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="divide" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="percent" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="closeParentesis" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="openParentesis" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="openParentesis2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="openParentesis1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="seven1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="four1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="multiply" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="nine" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="eight" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="seven" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="one2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="four2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="decimal2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="seven2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="minus" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="six" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="five" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="four" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="divide" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="percent" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="closeParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="openParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="three" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="two" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="one" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="plus" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="multiply" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="nine" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="eight" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="seven" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="equals" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="zero" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="decimal" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="negation" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="minus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="six" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="five" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="four" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="plus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="three" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="two" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="one" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="equals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="negation" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="zero" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="decimal" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -386,6 +438,116 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="negationAction"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="openParentesis1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="=="/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis1buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="one1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one1buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="decimal1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&gt;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal1buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="seven1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;="/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven1buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="four1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&gt;="/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four1buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="openParentesis2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="!="/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis2buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="one2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="||"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one2buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="decimal2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&amp;&amp;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal2buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="seven2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="="/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven2buttonPress"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="four2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Montserrat" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="!("/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four2buttonPress"/>
       </Events>
     </Component>
   </SubComponents>
