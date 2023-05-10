@@ -20,535 +20,575 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,48,0,0,1,-52"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="result" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="decimal" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="zero" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="negation" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="one" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="two" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="three" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="four" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="five" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="six" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="seven" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="eight" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="nine" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  </Group>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="buttonPanel">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+          <BorderConstraints direction="Center"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="four1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="decimal1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="one" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="two" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="three" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="multiply" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Component id="minus" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Component id="plus" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Component id="equals" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="decimal2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="one2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="seven" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="eight" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="nine" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="openParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="closeParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="percent" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="divide" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="four2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="one2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="decimal2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="seven2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="four1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="seven1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="decimal1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="one1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="seven1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="one1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="decimal" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="zero" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="negation" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="openParentesis1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Component id="clearAll" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="openParentesis2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Component id="delete" linkSize="10" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="four" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="five" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="six" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="multiply" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="minus" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="plus" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="equals" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="four2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="seven2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="openParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="clearAll" alignment="1" min="-2" pref="219" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="closeParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="percent" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="divide" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="delete" alignment="0" min="-2" pref="219" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Component id="result" min="-2" pref="51" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="delete" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="clearAll" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="one1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="decimal1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="clearAll" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="delete" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="divide" linkSize="11" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="percent" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="closeParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="openParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="seven2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="four2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="multiply" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="nine" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="eight" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="seven" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="one2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="decimal2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="minus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="six" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="five" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="four" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="openParentesis2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="openParentesis1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="plus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="three" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="two" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="one" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="decimal1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="four1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="equals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="negation" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="zero" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="decimal" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="one1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="seven1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="openParentesis2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="openParentesis1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="seven1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="four1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="one2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="four2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="decimal2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="seven2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="divide" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="percent" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="closeParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="openParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="multiply" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="nine" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="eight" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="seven" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="minus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="six" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="five" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="four" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="plus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="three" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="two" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="one" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="equals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="negation" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="zero" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="decimal" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
-      </Group>
-    </DimensionLayout>
-  </Layout>
-  <SubComponents>
-    <Component class="javax.swing.JTextField" name="result">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="24" style="0"/>
-        </Property>
-        <Property name="actionCommand" type="java.lang.String" value="null"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="result.setEditable(false);"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JButton" name="clearAll">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="CA"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearAllActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="delete">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Del"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="percent">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="%"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="seven">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="7"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="eight">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="8"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="nine">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="9"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="four">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="4"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="five">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="5"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="six">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="6"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="one">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="1"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="three">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="3"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="two">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="2"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="decimal">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="."/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="zero">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="0"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="divide">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="/"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="multiply">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="*"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="minus">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="-"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="plus">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="+"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="equals">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="="/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="equalsActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="openParentesis">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="("/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="closeParentesis">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value=")"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="negation">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="(-)"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="negationAction"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="openParentesis1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="=="/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis1buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="one1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&lt;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one1buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="decimal1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&gt;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal1buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="seven1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&lt;="/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven1buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="four1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&gt;="/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four1buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="openParentesis2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="!="/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis2buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="one2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="||"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one2buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="decimal2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&amp;&amp;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal2buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="seven2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="="/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven2buttonPress"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="four2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Montserrat" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="!("/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four2buttonPress"/>
-      </Events>
-    </Component>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="percent">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="%"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="plus">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="+"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="openParentesis1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="=="/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis1buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="closeParentesis">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=")"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="two">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="2"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="one">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="equals">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="="/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="equalsActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="multiply">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="*"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="four">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="4"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="four1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&gt;="/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four1buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="one2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="||"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one2buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="decimal1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&gt;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal1buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="seven">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="7"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="decimal2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&amp;&amp;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal2buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="decimal">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="."/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="openParentesis2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="!="/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis2buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="delete">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Del"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="three">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="minus">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="-"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="openParentesis">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="("/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="negation">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="(-)"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="negationAction"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="clearAll">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="CA"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearAllActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="one1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&lt;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one1buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="zero">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="four2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="!("/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four2buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="divide">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="/"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="seven2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="="/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven2buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="five">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="5"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="seven1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&lt;="/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven1buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="nine">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="9"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="six">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="6"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="eight">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="8"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="resultPanel">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+          <BorderConstraints direction="First"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="result" alignment="0" min="-2" pref="444" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="result" min="-2" pref="92" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="result">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="df" green="d9" red="d6" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Montserrat" size="48" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
+            <Property name="actionCommand" type="java.lang.String" value="null"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                <EmptyBorder/>
+              </Border>
+            </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection component="Form" name="getBackground" type="method"/>
+            </Property>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="result.setEditable(false);"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
