@@ -759,7 +759,7 @@ public class Calc extends javax.swing.JFrame {
 
     private void negationAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negationAction
         // TODO add your handling code here:
-        String lastNum = result.getText().replaceAll(".*[\\+\\/\\*]+", "");
+        String lastNum = result.getText().replaceAll("^[^-].*(?<![\\(])[\\+\\/\\*\\%\\-]+", "");
         if (lastNum.isEmpty())
             return;
         String newEquation = result.getText().replaceAll("([\\d\\)]|\\(\\-)+$", "");
@@ -884,10 +884,10 @@ public class Calc extends javax.swing.JFrame {
     }
     
     private String evalEquation(String finalEquation){
-        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d%])-?[\\d.%]+")));
-        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\+\\*\\/])\\-?(?<!^)\\-?[\\+\\-\\*\\/]")));
+        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])-?[\\d.]+")));
+        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\+\\*\\/\\%])\\-?(?<!^)\\-?[\\+\\-\\*\\/\\%]")));
         equations.removeAll(Arrays.asList(""));
-        numbers.replaceAll(e -> handlePercent(e));
+//        numbers.replaceAll(e -> handlePercent(e));
         
         
         while(numbers.size() > 1){
@@ -895,15 +895,19 @@ public class Calc extends javax.swing.JFrame {
             int divPos = equations.indexOf("/");
             int addPos = equations.indexOf("+");
             int subPos = equations.indexOf("-");
+            int modPos = equations.indexOf("%");
             int selPos = -1;
             Arithmetic selArithmetic = Arithmetic.ADD;
 
-            if((divPos > -1 && mulPos == -1) || (divPos < mulPos && divPos != -1)){
+            if((divPos > -1 && mulPos == -1 && modPos == -1) || (divPos < mulPos && divPos < modPos && divPos != -1 && modPos != -1)){
                 selPos = divPos;
                 selArithmetic = Arithmetic.DIV;
-            }else if((mulPos > -1 && divPos == -1) || (mulPos < divPos && mulPos != -1)){
+            }else if((mulPos > -1 && divPos == -1 && modPos == -1) || (mulPos < divPos && mulPos < modPos && mulPos != -1 && modPos == -1)){
                 selPos = mulPos;
-                selArithmetic = Arithmetic.MUL;                    
+                selArithmetic = Arithmetic.MUL;
+            }else if((modPos > -1 && mulPos == -1 && divPos == -1) || (modPos < divPos && modPos < mulPos && mulPos != -1 && divPos != -1)){
+                selPos = modPos;
+                selArithmetic = Arithmetic.MOD;
             }else if((addPos > -1 && subPos == -1) || (addPos < subPos && addPos != -1)){
                 selPos = addPos;
                 selArithmetic = Arithmetic.ADD;
@@ -935,11 +939,11 @@ public class Calc extends javax.swing.JFrame {
     
     private enum Arithmetic {ADD, SUB, MUL, DIV, MOD};
     
-    private String handlePercent(String e){
-        if(e.endsWith("%"))
-            return String.valueOf(Double.parseDouble(e.substring(0, e.length()-1))/100);
-        return e;
-    }
+//    private String handlePercent(String e){
+//        if(e.endsWith("%"))
+//            return String.valueOf(Double.parseDouble(e.substring(0, e.length()-1))/100);
+//        return e;
+//    }
     
     private Double calculateEquation(int pos, List<String> numbers, Arithmetic a ) {
         Double num1 = Double.valueOf(numbers.get(pos));
@@ -964,13 +968,13 @@ public class Calc extends javax.swing.JFrame {
             
         // handle illegal placement of numbers and decimals
         //  - Check if the last symbol isn't % or )
-        if(result.getText().matches(".*[\\%\\)]$") && button.getText().matches("^[0-9\\.]$"))
+        if(result.getText().matches(".*[\\)]$") && button.getText().matches("^[0-9\\.]$"))
             return false;
 
         // handle multiple decimals
         //  - Check if there isn't another decimal in the last number
 
-        String lastNum = result.getText().replaceAll(".*[\\+\\-\\/\\*\\)]+", "");
+        String lastNum = result.getText().replaceAll("^[^-].*(?<![\\(])[\\+\\/\\*\\%\\-]+", "");
         if(lastNum.matches(".*\\..*") && button.getText().equals("."))
             return false;
 
@@ -982,8 +986,8 @@ public class Calc extends javax.swing.JFrame {
 
         // handle possible errors in percentage
         //  - Check if the last symbol ends isn't +, -, *, /, (, %
-        if(result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$") && button.getText().equals("%"))
-            return false;
+//        if(result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$") && button.getText().equals("%"))
+//            return false;
 
         // handle possible errors in open parentheses
         //  - If the last symbol is a digit or ) then imply that it is multiplication

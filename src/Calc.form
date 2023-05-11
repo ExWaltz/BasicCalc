@@ -51,18 +51,13 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="four6" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="seven4" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="openParentesis4" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="clearAll" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="four6" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="seven4" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="openParentesis4" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="four3" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="clearAll" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="four3" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="delete" min="-2" pref="69" max="-2" attributes="0"/>
@@ -128,7 +123,6 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="four2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="seven2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
