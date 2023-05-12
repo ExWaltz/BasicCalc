@@ -765,10 +765,12 @@ public class Calc extends javax.swing.JFrame {
                 deleteActionPerformed(evt);
                 resultText = result.getText();
             }
-            
             if(buttonText.matches("^(\\+|\\-|\\*|\\.|\\/|\\%)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
                 return;
             
+            if(buttonText.matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)\\(.*"))
+                return;
+
             if(buttonText.matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
                 resultText = resultText.replaceAll("(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$", "");
             
