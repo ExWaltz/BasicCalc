@@ -49,30 +49,33 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="four6" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="seven4" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="openParentesis4" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="assignDiv" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="addAdd" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="assignMod" linkSize="10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="clearAll" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="clearAll" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="four3" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="minMin" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="delete" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="four4" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="decimal3" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="seven3" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="openParentesis3" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="assignAdd" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="assignMul" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="assignment" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="assignMin" linkSize="10" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="four1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="greaterEquals" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="decimal1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="greaterThan" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   <Component id="one" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -81,20 +84,9 @@
                                   <Component id="three" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="decimal2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="lessEquals" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="one2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="seven" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="eight" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="nine" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="seven1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="one1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="lessThan" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   <Component id="decimal" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -103,15 +95,29 @@
                                   <Component id="negation" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="openParentesis1" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="equalsComparison" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="openParentesis2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="notEquals" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   <Component id="four" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   <Component id="five" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   <Component id="six" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="not" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <Component id="and" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                  <Component id="or" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                  <Component id="seven" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                  <Component id="eight" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                  <Component id="nine" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -123,9 +129,7 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="four2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="seven2" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="bitwise" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="openParentesis" linkSize="10" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -144,76 +148,57 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-                          <Component id="openParentesis4" linkSize="11" min="-2" pref="39" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="four6" linkSize="11" min="-2" pref="39" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="seven4" linkSize="11" min="-2" pref="39" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="clearAll" linkSize="11" min="-2" pref="39" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="decimal3" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="four3" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="openParentesis3" linkSize="11" min="-2" pref="39" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="four4" linkSize="11" min="-2" pref="39" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="seven3" linkSize="11" min="-2" pref="39" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="divide" linkSize="11" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="percent" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="closeParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="openParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="seven2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="four2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="delete" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="multiply" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="nine" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="eight" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="seven" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="one2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="decimal2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="minus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="six" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="five" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="four" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="openParentesis2" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="openParentesis1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="plus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="three" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="two" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="one" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="decimal1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="four1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="equals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="negation" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="zero" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="decimal" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="one1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="seven1" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="divide" linkSize="11" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="percent" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="closeParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="openParentesis" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="bitwise" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="not" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="delete" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="clearAll" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="multiply" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="nine" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="eight" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="seven" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="or" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="and" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="assignMul" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="minMin" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="minus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="six" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="five" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="four" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="notEquals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="equalsComparison" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="assignMin" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="addAdd" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="plus" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="three" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="two" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="one" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="greaterThan" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="greaterEquals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="assignAdd" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="assignDiv" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="equals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="negation" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="zero" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="decimal" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="lessThan" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="lessEquals" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="assignment" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="assignMod" linkSize="11" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               </Group>
@@ -240,7 +225,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="plus">
@@ -265,7 +250,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="openParentesis1">
+        <Component class="javax.swing.JButton" name="equalsComparison">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -284,7 +269,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis1buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="closeParentesis">
@@ -419,7 +404,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="four1">
+        <Component class="javax.swing.JButton" name="greaterEquals">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -438,10 +423,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four1buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="one2">
+        <Component class="javax.swing.JButton" name="or">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -460,10 +445,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one2buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="orbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="decimal1">
+        <Component class="javax.swing.JButton" name="greaterThan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -482,7 +467,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal1buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="seven">
@@ -507,7 +492,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="decimal2">
+        <Component class="javax.swing.JButton" name="and">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -526,7 +511,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal2buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="andbuttonPress"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="decimal">
@@ -551,7 +536,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="openParentesis2">
+        <Component class="javax.swing.JButton" name="notEquals">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -570,7 +555,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis2buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="delete">
@@ -705,7 +690,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearAllActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="one1">
+        <Component class="javax.swing.JButton" name="lessThan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -724,7 +709,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="one1buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="zero">
@@ -749,7 +734,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="four2">
+        <Component class="javax.swing.JButton" name="not">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -768,7 +753,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four2buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="notbuttonPress"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="divide">
@@ -793,7 +778,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="seven2">
+        <Component class="javax.swing.JButton" name="bitwise">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -812,7 +797,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven2buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bitwisebuttonPress"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="five">
@@ -837,7 +822,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="seven1">
+        <Component class="javax.swing.JButton" name="lessEquals">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -856,7 +841,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven1buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operatorAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="nine">
@@ -925,7 +910,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="four3">
+        <Component class="javax.swing.JButton" name="assignDiv">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -944,10 +929,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four3buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignDivbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="seven3">
+        <Component class="javax.swing.JButton" name="assignment">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -966,10 +951,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven3buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignmentbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="four4">
+        <Component class="javax.swing.JButton" name="assignAdd">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -988,10 +973,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four4buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignAddbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="decimal3">
+        <Component class="javax.swing.JButton" name="assignMul">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -1010,10 +995,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimal3buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignMulbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="openParentesis3">
+        <Component class="javax.swing.JButton" name="assignMin">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -1032,10 +1017,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis3buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignMinbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="seven4">
+        <Component class="javax.swing.JButton" name="assignMod">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -1054,10 +1039,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seven4buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignModbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="four6">
+        <Component class="javax.swing.JButton" name="addAdd">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -1076,10 +1061,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="four6buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addAddbuttonPress"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="openParentesis4">
+        <Component class="javax.swing.JButton" name="minMin">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="operatorColor" type="code"/>
@@ -1098,7 +1083,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openParentesis4buttonPress"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minMinbuttonPress"/>
           </Events>
         </Component>
       </SubComponents>

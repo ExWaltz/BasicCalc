@@ -29,44 +29,44 @@ public class Calc extends javax.swing.JFrame {
         buttonPanel = new javax.swing.JPanel();
         percent = new javax.swing.JButton();
         plus = new javax.swing.JButton();
-        openParentesis1 = new javax.swing.JButton();
+        equalsComparison = new javax.swing.JButton();
         closeParentesis = new javax.swing.JButton();
         two = new javax.swing.JButton();
         one = new javax.swing.JButton();
         equals = new javax.swing.JButton();
         multiply = new javax.swing.JButton();
         four = new javax.swing.JButton();
-        four1 = new javax.swing.JButton();
-        one2 = new javax.swing.JButton();
-        decimal1 = new javax.swing.JButton();
+        greaterEquals = new javax.swing.JButton();
+        or = new javax.swing.JButton();
+        greaterThan = new javax.swing.JButton();
         seven = new javax.swing.JButton();
-        decimal2 = new javax.swing.JButton();
+        and = new javax.swing.JButton();
         decimal = new javax.swing.JButton();
-        openParentesis2 = new javax.swing.JButton();
+        notEquals = new javax.swing.JButton();
         delete = new javax.swing.JButton();
         three = new javax.swing.JButton();
         minus = new javax.swing.JButton();
         openParentesis = new javax.swing.JButton();
         negation = new javax.swing.JButton();
         clearAll = new javax.swing.JButton();
-        one1 = new javax.swing.JButton();
+        lessThan = new javax.swing.JButton();
         zero = new javax.swing.JButton();
-        four2 = new javax.swing.JButton();
+        not = new javax.swing.JButton();
         divide = new javax.swing.JButton();
-        seven2 = new javax.swing.JButton();
+        bitwise = new javax.swing.JButton();
         five = new javax.swing.JButton();
-        seven1 = new javax.swing.JButton();
+        lessEquals = new javax.swing.JButton();
         nine = new javax.swing.JButton();
         six = new javax.swing.JButton();
         eight = new javax.swing.JButton();
-        four3 = new javax.swing.JButton();
-        seven3 = new javax.swing.JButton();
-        four4 = new javax.swing.JButton();
-        decimal3 = new javax.swing.JButton();
-        openParentesis3 = new javax.swing.JButton();
-        seven4 = new javax.swing.JButton();
-        four6 = new javax.swing.JButton();
-        openParentesis4 = new javax.swing.JButton();
+        assignDiv = new javax.swing.JButton();
+        assignment = new javax.swing.JButton();
+        assignAdd = new javax.swing.JButton();
+        assignMul = new javax.swing.JButton();
+        assignMin = new javax.swing.JButton();
+        assignMod = new javax.swing.JButton();
+        addAdd = new javax.swing.JButton();
+        minMin = new javax.swing.JButton();
         resultPanel = new javax.swing.JPanel();
         result = new javax.swing.JTextField();
 
@@ -85,7 +85,7 @@ public class Calc extends javax.swing.JFrame {
         percent.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         percent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                operatorAction(evt);
             }
         });
 
@@ -100,14 +100,14 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        openParentesis1.setBackground(operatorColor);
-        openParentesis1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        openParentesis1.setForeground(textColor);
-        openParentesis1.setText("==");
-        openParentesis1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        openParentesis1.addActionListener(new java.awt.event.ActionListener() {
+        equalsComparison.setBackground(operatorColor);
+        equalsComparison.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        equalsComparison.setForeground(textColor);
+        equalsComparison.setText("==");
+        equalsComparison.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        equalsComparison.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                openParentesis1buttonPress(evt);
+                operatorAction(evt);
             }
         });
 
@@ -177,36 +177,36 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        four1.setBackground(operatorColor);
-        four1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        four1.setForeground(textColor);
-        four1.setText(">=");
-        four1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        four1.addActionListener(new java.awt.event.ActionListener() {
+        greaterEquals.setBackground(operatorColor);
+        greaterEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        greaterEquals.setForeground(textColor);
+        greaterEquals.setText(">=");
+        greaterEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        greaterEquals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                four1buttonPress(evt);
+                operatorAction(evt);
             }
         });
 
-        one2.setBackground(operatorColor);
-        one2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        one2.setForeground(textColor);
-        one2.setText("||");
-        one2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        one2.addActionListener(new java.awt.event.ActionListener() {
+        or.setBackground(operatorColor);
+        or.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        or.setForeground(textColor);
+        or.setText("||");
+        or.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        or.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                one2buttonPress(evt);
+                orbuttonPress(evt);
             }
         });
 
-        decimal1.setBackground(operatorColor);
-        decimal1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        decimal1.setForeground(textColor);
-        decimal1.setText(">");
-        decimal1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        decimal1.addActionListener(new java.awt.event.ActionListener() {
+        greaterThan.setBackground(operatorColor);
+        greaterThan.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        greaterThan.setForeground(textColor);
+        greaterThan.setText(">");
+        greaterThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        greaterThan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                decimal1buttonPress(evt);
+                operatorAction(evt);
             }
         });
 
@@ -221,14 +221,14 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        decimal2.setBackground(operatorColor);
-        decimal2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        decimal2.setForeground(textColor);
-        decimal2.setText("&&");
-        decimal2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        decimal2.addActionListener(new java.awt.event.ActionListener() {
+        and.setBackground(operatorColor);
+        and.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        and.setForeground(textColor);
+        and.setText("&&");
+        and.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        and.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                decimal2buttonPress(evt);
+                andbuttonPress(evt);
             }
         });
 
@@ -243,14 +243,14 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        openParentesis2.setBackground(operatorColor);
-        openParentesis2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        openParentesis2.setForeground(textColor);
-        openParentesis2.setText("!=");
-        openParentesis2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        openParentesis2.addActionListener(new java.awt.event.ActionListener() {
+        notEquals.setBackground(operatorColor);
+        notEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        notEquals.setForeground(textColor);
+        notEquals.setText("!=");
+        notEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        notEquals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                openParentesis2buttonPress(evt);
+                operatorAction(evt);
             }
         });
 
@@ -320,14 +320,14 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        one1.setBackground(operatorColor);
-        one1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        one1.setForeground(textColor);
-        one1.setText("<");
-        one1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        one1.addActionListener(new java.awt.event.ActionListener() {
+        lessThan.setBackground(operatorColor);
+        lessThan.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        lessThan.setForeground(textColor);
+        lessThan.setText("<");
+        lessThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        lessThan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                one1buttonPress(evt);
+                operatorAction(evt);
             }
         });
 
@@ -342,14 +342,14 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        four2.setBackground(operatorColor);
-        four2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        four2.setForeground(textColor);
-        four2.setText("!(");
-        four2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        four2.addActionListener(new java.awt.event.ActionListener() {
+        not.setBackground(operatorColor);
+        not.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        not.setForeground(textColor);
+        not.setText("!(");
+        not.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        not.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                four2buttonPress(evt);
+                notbuttonPress(evt);
             }
         });
 
@@ -364,14 +364,14 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        seven2.setBackground(operatorColor);
-        seven2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        seven2.setForeground(textColor);
-        seven2.setText("^");
-        seven2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        seven2.addActionListener(new java.awt.event.ActionListener() {
+        bitwise.setBackground(operatorColor);
+        bitwise.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        bitwise.setForeground(textColor);
+        bitwise.setText("^");
+        bitwise.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        bitwise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seven2buttonPress(evt);
+                bitwisebuttonPress(evt);
             }
         });
 
@@ -386,14 +386,14 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        seven1.setBackground(operatorColor);
-        seven1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        seven1.setForeground(textColor);
-        seven1.setText("<=");
-        seven1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        seven1.addActionListener(new java.awt.event.ActionListener() {
+        lessEquals.setBackground(operatorColor);
+        lessEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        lessEquals.setForeground(textColor);
+        lessEquals.setText("<=");
+        lessEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        lessEquals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seven1buttonPress(evt);
+                operatorAction(evt);
             }
         });
 
@@ -430,91 +430,91 @@ public class Calc extends javax.swing.JFrame {
             }
         });
 
-        four3.setBackground(operatorColor);
-        four3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        four3.setForeground(textColor);
-        four3.setText("/=");
-        four3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        four3.addActionListener(new java.awt.event.ActionListener() {
+        assignDiv.setBackground(operatorColor);
+        assignDiv.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignDiv.setForeground(textColor);
+        assignDiv.setText("/=");
+        assignDiv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignDiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                four3buttonPress(evt);
+                assignDivbuttonPress(evt);
             }
         });
 
-        seven3.setBackground(operatorColor);
-        seven3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        seven3.setForeground(textColor);
-        seven3.setText("=");
-        seven3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        seven3.addActionListener(new java.awt.event.ActionListener() {
+        assignment.setBackground(operatorColor);
+        assignment.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignment.setForeground(textColor);
+        assignment.setText("=");
+        assignment.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seven3buttonPress(evt);
+                assignmentbuttonPress(evt);
             }
         });
 
-        four4.setBackground(operatorColor);
-        four4.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        four4.setForeground(textColor);
-        four4.setText("+=");
-        four4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        four4.addActionListener(new java.awt.event.ActionListener() {
+        assignAdd.setBackground(operatorColor);
+        assignAdd.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignAdd.setForeground(textColor);
+        assignAdd.setText("+=");
+        assignAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                four4buttonPress(evt);
+                assignAddbuttonPress(evt);
             }
         });
 
-        decimal3.setBackground(operatorColor);
-        decimal3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        decimal3.setForeground(textColor);
-        decimal3.setText("*=");
-        decimal3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        decimal3.addActionListener(new java.awt.event.ActionListener() {
+        assignMul.setBackground(operatorColor);
+        assignMul.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignMul.setForeground(textColor);
+        assignMul.setText("*=");
+        assignMul.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignMul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                decimal3buttonPress(evt);
+                assignMulbuttonPress(evt);
             }
         });
 
-        openParentesis3.setBackground(operatorColor);
-        openParentesis3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        openParentesis3.setForeground(textColor);
-        openParentesis3.setText("-=");
-        openParentesis3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        openParentesis3.addActionListener(new java.awt.event.ActionListener() {
+        assignMin.setBackground(operatorColor);
+        assignMin.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignMin.setForeground(textColor);
+        assignMin.setText("-=");
+        assignMin.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                openParentesis3buttonPress(evt);
+                assignMinbuttonPress(evt);
             }
         });
 
-        seven4.setBackground(operatorColor);
-        seven4.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        seven4.setForeground(textColor);
-        seven4.setText("%=");
-        seven4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        seven4.addActionListener(new java.awt.event.ActionListener() {
+        assignMod.setBackground(operatorColor);
+        assignMod.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignMod.setForeground(textColor);
+        assignMod.setText("%=");
+        assignMod.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignMod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seven4buttonPress(evt);
+                assignModbuttonPress(evt);
             }
         });
 
-        four6.setBackground(operatorColor);
-        four6.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        four6.setForeground(textColor);
-        four6.setText("++");
-        four6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        four6.addActionListener(new java.awt.event.ActionListener() {
+        addAdd.setBackground(operatorColor);
+        addAdd.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        addAdd.setForeground(textColor);
+        addAdd.setText("++");
+        addAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        addAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                four6buttonPress(evt);
+                addAddbuttonPress(evt);
             }
         });
 
-        openParentesis4.setBackground(operatorColor);
-        openParentesis4.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        openParentesis4.setForeground(textColor);
-        openParentesis4.setText("--");
-        openParentesis4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        openParentesis4.addActionListener(new java.awt.event.ActionListener() {
+        minMin.setBackground(operatorColor);
+        minMin.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        minMin.setForeground(textColor);
+        minMin.setText("--");
+        minMin.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        minMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                openParentesis4buttonPress(evt);
+                minMinbuttonPress(evt);
             }
         });
 
@@ -523,30 +523,29 @@ public class Calc extends javax.swing.JFrame {
         buttonPanelLayout.setHorizontalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonPanelLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(four6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seven4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(openParentesis4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(clearAll, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(buttonPanelLayout.createSequentialGroup()
-                        .addComponent(four3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)))
+                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(assignDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addAdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(assignMod, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(clearAll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(minMin, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
                 .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(four4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(decimal3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seven3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(openParentesis3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(assignAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignMul, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignment, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignMin, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
                 .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
                         .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addComponent(four1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(greaterEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(decimal1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(greaterThan, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(one, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -554,19 +553,9 @@ public class Calc extends javax.swing.JFrame {
                                 .addGap(0, 0, 0)
                                 .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addComponent(decimal2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lessEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(one2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addComponent(seven1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(one1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lessThan, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(decimal, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -574,15 +563,27 @@ public class Calc extends javax.swing.JFrame {
                                 .addGap(0, 0, 0)
                                 .addComponent(negation, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addComponent(openParentesis1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(equalsComparison, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(openParentesis2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(notEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(four, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(buttonPanelLayout.createSequentialGroup()
+                                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(not, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(and, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, 0)
+                                .addComponent(or, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, 0)
                         .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(multiply, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -590,10 +591,7 @@ public class Calc extends javax.swing.JFrame {
                             .addComponent(plus, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(four2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(seven2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bitwise, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(openParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
@@ -605,77 +603,63 @@ public class Calc extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        buttonPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {closeParentesis, decimal, decimal1, decimal2, decimal3, divide, eight, equals, five, four, four1, four2, four3, four4, four6, minus, multiply, negation, nine, one, one1, one2, openParentesis, openParentesis1, openParentesis2, openParentesis3, openParentesis4, percent, plus, seven, seven1, seven2, seven3, seven4, six, three, two, zero});
+        buttonPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addAdd, and, assignAdd, assignDiv, assignMin, assignMod, assignMul, assignment, bitwise, closeParentesis, decimal, divide, eight, equals, equalsComparison, five, four, greaterEquals, greaterThan, lessEquals, lessThan, minMin, minus, multiply, negation, nine, not, notEquals, one, openParentesis, or, percent, plus, seven, six, three, two, zero});
 
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonPanelLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(buttonPanelLayout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(openParentesis4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(four6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(seven4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(buttonPanelLayout.createSequentialGroup()
-                        .addComponent(clearAll, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(decimal3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(four3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0)
-                        .addComponent(openParentesis3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(four4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(seven3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(buttonPanelLayout.createSequentialGroup()
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(divide, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(closeParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(openParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seven2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(four2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(multiply, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(one2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(decimal2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(four, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(openParentesis2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(openParentesis1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(plus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(one, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(decimal1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(four1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(negation, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(decimal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(one1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seven1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(divide, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(closeParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(openParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bitwise, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(not, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearAll, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(multiply, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(or, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(and, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignMul, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(minMin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(four, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(notEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(equalsComparison, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignMin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(plus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(one, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(greaterThan, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(greaterEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(negation, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(decimal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lessThan, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lessEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignment, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assignMod, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0))
         );
 
-        buttonPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {clearAll, closeParentesis, decimal, decimal1, decimal2, decimal3, delete, divide, eight, equals, five, four, four1, four2, four3, four4, four6, minus, multiply, negation, nine, one, one1, one2, openParentesis, openParentesis1, openParentesis2, openParentesis3, openParentesis4, percent, plus, seven, seven1, seven2, seven3, seven4, six, three, two, zero});
+        buttonPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addAdd, and, assignAdd, assignDiv, assignMin, assignMod, assignMul, assignment, bitwise, clearAll, closeParentesis, decimal, delete, divide, eight, equals, equalsComparison, five, four, greaterEquals, greaterThan, lessEquals, lessThan, minMin, minus, multiply, negation, nine, not, notEquals, one, openParentesis, or, percent, plus, seven, six, three, two, zero});
 
         getContentPane().add(buttonPanel, java.awt.BorderLayout.CENTER);
 
@@ -714,6 +698,46 @@ public class Calc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private boolean validateButtonAction(javax.swing.JButton button){
+            
+        // handle illegal placement of numbers and decimals
+        //  - Check if the last symbol isn't % or )
+        if(result.getText().matches(".*[\\)]$") && button.getText().matches("^[0-9\\.]$"))
+            return false;
+
+        // handle multiple decimals
+        //  - Check if there isn't another decimal in the last number
+
+        String lastNum = result.getText().replaceAll("^[^-].*(?<![\\(])[\\+\\/\\*\\%\\-]+", "");
+        if(lastNum.matches(".*\\..*") && button.getText().equals("."))
+            return false;
+
+        // handle possible errors in close parentheses
+        //  - Check if there there is an open parenthesis to close
+        //  - Check if the last symbol in the equation isn't +, -, *, /, (
+        if((isBalanced(result.getText()) || result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$")) && button.getText().equals(")"))
+            return false;
+
+        // handle possible errors in percentage
+        //  - Check if the last symbol ends isn't +, -, *, /, (, %
+//        if(result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$") && button.getText().equals("%"))
+//            return false;
+
+        // handle possible errors in open parentheses
+        //  - If the last symbol is a digit or ) then imply that it is multiplication
+        if(result.getText().matches(".*(\\d|\\))$") && button.getText().equals("("))
+            result.setText(result.getText().concat("*"));
+        
+        if(result.getText().matches(".*(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
+            result.setText(result.getText().concat("("));
+        
+        if(result.getText().matches("(true|false)"))
+            result.setText("");
+
+        return true;
+    }
+    
+    
     private void buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPress
         if(evt.getSource() instanceof javax.swing.JButton){
             javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
@@ -722,35 +746,42 @@ public class Calc extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonPress
 
-    private void seven1buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seven1buttonPress
+    private void bitwisebuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bitwisebuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_seven1buttonPress
-
-    private void seven2buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seven2buttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_seven2buttonPress
+    }//GEN-LAST:event_bitwisebuttonPress
 
     private void operatorAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operatorAction
         if(evt.getSource() instanceof javax.swing.JButton){
             javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
             String resultText = result.getText();
             String buttonText = button.getText();
-            if(resultText.matches(".*\\([\\*\\-\\+\\/]*$") && !buttonText.equals("-"))
+            //handles open paretheses
+            // valid operators of open parenthesis is: -
+            if(resultText.matches(".*\\((\\+|\\-|\\*|\\.|\\/|\\%)*$") && !buttonText.equals("-"))
                 return;
-            if(resultText.matches(".*[\\+\\-\\*\\.\\/]+$"))
+            
+            //handles multiple operators
+            if(resultText.matches(".*(\\+|\\-|\\*|\\.|\\/|\\%)+$")){
                 deleteActionPerformed(evt);
+                resultText = result.getText();
+            }
+            
+            if(buttonText.matches("^(\\+|\\-|\\*|\\.|\\/|\\%)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
+                return;
+            
+            if(buttonText.matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
+                resultText = resultText.replaceAll("(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$", "");
+            
+            else if(buttonText.matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
+                resultText = "(" + resultText + ")";
 
             result.setText(resultText.concat(buttonText));
         }
     }//GEN-LAST:event_operatorAction
 
-    private void four2buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_four2buttonPress
+    private void notbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_four2buttonPress
-
-    private void one1buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_one1buttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_one1buttonPress
+    }//GEN-LAST:event_notbuttonPress
 
     private void clearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllActionPerformed
         // TODO add your handling code here:
@@ -771,31 +802,29 @@ public class Calc extends javax.swing.JFrame {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-        if(result.getText().equals(""))
+        String resultText = result.getText();
+        int start = 0;
+        int endModifer = 1;
+        if(resultText.equals(""))
             return;
+        if(resultText.matches(".*(\\>|\\<)$")){
+            start++;
+            endModifer++;
+        } else if (resultText.matches(".*^(\\=\\=|\\!\\=|\\<\\=|\\>\\=)$$")){
+            start++;
+            endModifer += 2;
+        }
 
-        result.setText(result.getText().substring(0, result.getText().length()-1));
+        result.setText(result.getText().substring(start, result.getText().length()-endModifer));
     }//GEN-LAST:event_deleteActionPerformed
 
-    private void openParentesis2buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openParentesis2buttonPress
+    private void andbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_andbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_openParentesis2buttonPress
+    }//GEN-LAST:event_andbuttonPress
 
-    private void decimal2buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimal2buttonPress
+    private void orbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_decimal2buttonPress
-
-    private void decimal1buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimal1buttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_decimal1buttonPress
-
-    private void one2buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_one2buttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_one2buttonPress
-
-    private void four1buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_four1buttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_four1buttonPress
+    }//GEN-LAST:event_orbuttonPress
 
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
         // TODO add your handling code here:
@@ -806,8 +835,9 @@ public class Calc extends javax.swing.JFrame {
                 return;
             }
 
-            if(finalEquation.matches(".*[\\+\\-\\*\\.\\/]+$")){
+            if(finalEquation.matches(".*[\\+\\-\\*\\.\\/\\%]+$")){
                 deleteActionPerformed(evt);
+                finalEquation = result.getText();
             }
 
             while(!isBalanced(finalEquation)){
@@ -818,51 +848,51 @@ public class Calc extends javax.swing.JFrame {
                 finalEquation = handleParentesis(finalEquation);
             }
             String answer = evalEquation(finalEquation);
-
-            DecimalFormat format = new DecimalFormat("0.#############");
-            result.setText(format.format(Double.valueOf(answer)));
+            
+            if(answer.matches("(true|false)")){
+                result.setText(answer);
+            } else {
+                DecimalFormat format = new DecimalFormat("0.#############");
+                result.setText(format.format(Double.valueOf(answer)));
+            }
         }
     }//GEN-LAST:event_equalsActionPerformed
-
-    private void openParentesis1buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openParentesis1buttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_openParentesis1buttonPress
 
     private void resultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_resultActionPerformed
 
-    private void four3buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_four3buttonPress
+    private void assignDivbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignDivbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_four3buttonPress
+    }//GEN-LAST:event_assignDivbuttonPress
 
-    private void seven3buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seven3buttonPress
+    private void assignmentbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignmentbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_seven3buttonPress
+    }//GEN-LAST:event_assignmentbuttonPress
 
-    private void four4buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_four4buttonPress
+    private void assignAddbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignAddbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_four4buttonPress
+    }//GEN-LAST:event_assignAddbuttonPress
 
-    private void decimal3buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimal3buttonPress
+    private void assignMulbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignMulbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_decimal3buttonPress
+    }//GEN-LAST:event_assignMulbuttonPress
 
-    private void openParentesis3buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openParentesis3buttonPress
+    private void assignMinbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignMinbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_openParentesis3buttonPress
+    }//GEN-LAST:event_assignMinbuttonPress
 
-    private void seven4buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seven4buttonPress
+    private void assignModbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignModbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_seven4buttonPress
+    }//GEN-LAST:event_assignModbuttonPress
 
-    private void four6buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_four6buttonPress
+    private void addAddbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAddbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_four6buttonPress
+    }//GEN-LAST:event_addAddbuttonPress
 
-    private void openParentesis4buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openParentesis4buttonPress
+    private void minMinbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minMinbuttonPress
         // TODO add your handling code here:
-    }//GEN-LAST:event_openParentesis4buttonPress
+    }//GEN-LAST:event_minMinbuttonPress
 
     private String handleParentesis(String finalEquation){
         int startPos = -1, endPos = -1;
@@ -884,40 +914,66 @@ public class Calc extends javax.swing.JFrame {
     }
     
     private String evalEquation(String finalEquation){
-        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])-?[\\d.]+")));
-        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\+\\*\\/\\%])\\-?(?<!^)\\-?[\\+\\-\\*\\/\\%]")));
+        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])\\-?[\\d.]+")));
+        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\+\\*\\/\\%])\\-?(?<!^)\\-?[\\+\\-\\*\\/\\%\\<\\>\\=]")));
         equations.removeAll(Arrays.asList(""));
+        numbers.removeAll(Arrays.asList(""));
 //        numbers.replaceAll(e -> handlePercent(e));
         
-        
+        //Handle operations 
         while(numbers.size() > 1){
             int mulPos = equations.indexOf("*");
             int divPos = equations.indexOf("/");
             int addPos = equations.indexOf("+");
             int subPos = equations.indexOf("-");
             int modPos = equations.indexOf("%");
+            
             int selPos = -1;
-            Arithmetic selArithmetic = Arithmetic.ADD;
+            Operators selOperator = Operators.ADD;
 
             if((divPos > -1 && mulPos == -1 && modPos == -1) || (divPos < mulPos && divPos < modPos && divPos != -1 && modPos != -1)){
                 selPos = divPos;
-                selArithmetic = Arithmetic.DIV;
+                selOperator = Operators.DIV;
             }else if((mulPos > -1 && divPos == -1 && modPos == -1) || (mulPos < divPos && mulPos < modPos && mulPos != -1 && modPos == -1)){
                 selPos = mulPos;
-                selArithmetic = Arithmetic.MUL;
+                selOperator = Operators.MUL;
             }else if((modPos > -1 && mulPos == -1 && divPos == -1) || (modPos < divPos && modPos < mulPos && mulPos != -1 && divPos != -1)){
                 selPos = modPos;
-                selArithmetic = Arithmetic.MOD;
+                selOperator = Operators.MOD;
             }else if((addPos > -1 && subPos == -1) || (addPos < subPos && addPos != -1)){
                 selPos = addPos;
-                selArithmetic = Arithmetic.ADD;
+                selOperator = Operators.ADD;
             }else if((subPos > -1 && addPos == -1) || (subPos < addPos && subPos != -1)){
                 selPos = subPos;
-                selArithmetic = Arithmetic.SUB;
+                selOperator = Operators.SUB;
+            }
+            
+            if(equations.get(0).matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
+                selPos = 0;
+            
+            switch (equations.get(0)) {
+                case ">":
+                    selOperator = Operators.GT;
+                    break;
+                case "<":
+                    selOperator = Operators.LT;
+                    break;
+                case ">=":
+                    selOperator = Operators.GE;
+                    break;
+                case "<=":
+                    selOperator = Operators.LE;
+                    break;
+                case "==":
+                    selOperator = Operators.ET;
+                    break;
+                case "!=":
+                    selOperator = Operators.NET;
+                    break;
             }
             System.out.println(numbers);
             System.out.println(equations);
-            numbers.set(selPos, String.valueOf(calculateEquation(selPos, numbers, selArithmetic)));
+            numbers.set(selPos, calculateEquation(selPos, numbers, selOperator));
             System.out.println(numbers.get(selPos));
 
             equations.remove(selPos);
@@ -937,7 +993,19 @@ public class Calc extends javax.swing.JFrame {
         return i == 0;
     }
     
-    private enum Arithmetic {ADD, SUB, MUL, DIV, MOD};
+    private enum Operators {
+        ADD, 
+        SUB, 
+        MUL, 
+        DIV, 
+        MOD, 
+        LT, // Less than
+        GT, // Greater than
+        ET, // Equals to
+        LE, // Less than or Equals to
+        GE, // Greater than or Equals to
+        NET // Not Equals to
+    };
     
 //    private String handlePercent(String e){
 //        if(e.endsWith("%"))
@@ -945,57 +1013,38 @@ public class Calc extends javax.swing.JFrame {
 //        return e;
 //    }
     
-    private Double calculateEquation(int pos, List<String> numbers, Arithmetic a ) {
+    private String calculateEquation(int pos, List<String> numbers, Operators a ) {
         Double num1 = Double.valueOf(numbers.get(pos));
         Double num2 = Double.valueOf(numbers.get(pos+1));
         switch (a) {
             case MUL:
-                return num1 * num2;
+                return String.valueOf(num1 * num2);
             case DIV:
-                return num1 / num2;
+                return String.valueOf(num1 / num2);
             case ADD:
-                return num1 + num2;
+                return String.valueOf(num1 + num2);
             case SUB:
-                return num1 - num2;
+                return String.valueOf(num1 - num2);
             case MOD:
-                return num1 % num2;
+                return String.valueOf(num1 % num2);
+            case LT:
+                return String.valueOf(num1 < num2);
+            case GT:
+                return String.valueOf(num1 > num2);
+            case LE:
+                return String.valueOf(num1 <= num2);
+            case GE:
+                return String.valueOf(num1 >= num2);
+            case ET:
+                return String.valueOf(num1.equals(num2));
+            case NET:
+                return String.valueOf(!num1.equals(num2));
             default:
                 throw new AssertionError();
         }
     }
     
-    private boolean validateButtonAction(javax.swing.JButton button){
-            
-        // handle illegal placement of numbers and decimals
-        //  - Check if the last symbol isn't % or )
-        if(result.getText().matches(".*[\\)]$") && button.getText().matches("^[0-9\\.]$"))
-            return false;
-
-        // handle multiple decimals
-        //  - Check if there isn't another decimal in the last number
-
-        String lastNum = result.getText().replaceAll("^[^-].*(?<![\\(])[\\+\\/\\*\\%\\-]+", "");
-        if(lastNum.matches(".*\\..*") && button.getText().equals("."))
-            return false;
-
-        // handle possible errors in close parentheses
-        //  - Check if there there is an open parenthesis to close
-        //  - Check if the last symbol in the equation isn't +, -, *, /, (
-        if((isBalanced(result.getText()) || result.getText().matches(".*[\\+\\-\\*\\/\\(]$")) && button.getText().equals(")"))
-            return false;
-
-        // handle possible errors in percentage
-        //  - Check if the last symbol ends isn't +, -, *, /, (, %
-//        if(result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$") && button.getText().equals("%"))
-//            return false;
-
-        // handle possible errors in open parentheses
-        //  - If the last symbol is a digit or ) then imply that it is multiplication
-        if(result.getText().matches(".*(\\d|\\))$") && button.getText().equals("("))
-            result.setText(result.getText().concat("*"));
-
-        return true;
-    }
+    
         
     /**
      * @param args the command line arguments
@@ -1043,45 +1092,45 @@ public class Calc extends javax.swing.JFrame {
 //    new java.awt.Font("Montserrat", 0, 14)
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addAdd;
+    private javax.swing.JButton and;
+    private javax.swing.JButton assignAdd;
+    private javax.swing.JButton assignDiv;
+    private javax.swing.JButton assignMin;
+    private javax.swing.JButton assignMod;
+    private javax.swing.JButton assignMul;
+    private javax.swing.JButton assignment;
+    private javax.swing.JButton bitwise;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton clearAll;
     private javax.swing.JButton closeParentesis;
     private javax.swing.JButton decimal;
-    private javax.swing.JButton decimal1;
-    private javax.swing.JButton decimal2;
-    private javax.swing.JButton decimal3;
     private javax.swing.JButton delete;
     private javax.swing.JButton divide;
     private javax.swing.JButton eight;
     private javax.swing.JButton equals;
+    private javax.swing.JButton equalsComparison;
     private javax.swing.JButton five;
     private javax.swing.JButton four;
-    private javax.swing.JButton four1;
-    private javax.swing.JButton four2;
-    private javax.swing.JButton four3;
-    private javax.swing.JButton four4;
-    private javax.swing.JButton four6;
+    private javax.swing.JButton greaterEquals;
+    private javax.swing.JButton greaterThan;
+    private javax.swing.JButton lessEquals;
+    private javax.swing.JButton lessThan;
+    private javax.swing.JButton minMin;
     private javax.swing.JButton minus;
     private javax.swing.JButton multiply;
     private javax.swing.JButton negation;
     private javax.swing.JButton nine;
+    private javax.swing.JButton not;
+    private javax.swing.JButton notEquals;
     private javax.swing.JButton one;
-    private javax.swing.JButton one1;
-    private javax.swing.JButton one2;
     private javax.swing.JButton openParentesis;
-    private javax.swing.JButton openParentesis1;
-    private javax.swing.JButton openParentesis2;
-    private javax.swing.JButton openParentesis3;
-    private javax.swing.JButton openParentesis4;
+    private javax.swing.JButton or;
     private javax.swing.JButton percent;
     private javax.swing.JButton plus;
     private javax.swing.JTextField result;
     private javax.swing.JPanel resultPanel;
     private javax.swing.JButton seven;
-    private javax.swing.JButton seven1;
-    private javax.swing.JButton seven2;
-    private javax.swing.JButton seven3;
-    private javax.swing.JButton seven4;
     private javax.swing.JButton six;
     private javax.swing.JButton three;
     private javax.swing.JButton two;
