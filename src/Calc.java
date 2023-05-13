@@ -85,7 +85,7 @@ public class Calc extends javax.swing.JFrame {
         percent.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         percent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -96,7 +96,7 @@ public class Calc extends javax.swing.JFrame {
         plus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         plus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -107,7 +107,7 @@ public class Calc extends javax.swing.JFrame {
         equalsComparison.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         equalsComparison.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -118,7 +118,7 @@ public class Calc extends javax.swing.JFrame {
         closeParentesis.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         closeParentesis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -129,7 +129,7 @@ public class Calc extends javax.swing.JFrame {
         two.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         two.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -140,7 +140,7 @@ public class Calc extends javax.swing.JFrame {
         one.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         one.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -162,7 +162,7 @@ public class Calc extends javax.swing.JFrame {
         multiply.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         multiply.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -173,7 +173,7 @@ public class Calc extends javax.swing.JFrame {
         four.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         four.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -184,7 +184,7 @@ public class Calc extends javax.swing.JFrame {
         greaterEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         greaterEquals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -195,7 +195,7 @@ public class Calc extends javax.swing.JFrame {
         or.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         or.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -206,7 +206,7 @@ public class Calc extends javax.swing.JFrame {
         greaterThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         greaterThan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -217,7 +217,7 @@ public class Calc extends javax.swing.JFrame {
         seven.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         seven.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -228,7 +228,7 @@ public class Calc extends javax.swing.JFrame {
         and.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         and.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                andbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -239,7 +239,7 @@ public class Calc extends javax.swing.JFrame {
         decimal.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         decimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -250,7 +250,7 @@ public class Calc extends javax.swing.JFrame {
         notEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         notEquals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -272,7 +272,7 @@ public class Calc extends javax.swing.JFrame {
         three.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         three.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -283,7 +283,7 @@ public class Calc extends javax.swing.JFrame {
         minus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         minus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -294,7 +294,7 @@ public class Calc extends javax.swing.JFrame {
         openParentesis.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         openParentesis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -327,7 +327,7 @@ public class Calc extends javax.swing.JFrame {
         lessThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         lessThan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -338,7 +338,7 @@ public class Calc extends javax.swing.JFrame {
         zero.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         zero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -349,7 +349,7 @@ public class Calc extends javax.swing.JFrame {
         not.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         not.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                notbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -360,7 +360,7 @@ public class Calc extends javax.swing.JFrame {
         divide.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         divide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -371,7 +371,7 @@ public class Calc extends javax.swing.JFrame {
         bitwise.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         bitwise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bitwisebuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -382,7 +382,7 @@ public class Calc extends javax.swing.JFrame {
         five.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         five.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -393,7 +393,7 @@ public class Calc extends javax.swing.JFrame {
         lessEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         lessEquals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                operatorAction(evt);
+                buttonAction(evt);
             }
         });
 
@@ -404,7 +404,7 @@ public class Calc extends javax.swing.JFrame {
         nine.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         nine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -415,7 +415,7 @@ public class Calc extends javax.swing.JFrame {
         six.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         six.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -426,7 +426,7 @@ public class Calc extends javax.swing.JFrame {
         eight.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         eight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -665,13 +665,12 @@ public class Calc extends javax.swing.JFrame {
 
         resultPanel.setBackground(getBackground());
 
-        result.setEditable(false);
         result.setBackground(backgroundColor);
         result.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
         result.setForeground(textColor);
         result.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         result.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        result.setCaretColor(getBackground());
+        result.setCaretColor(new java.awt.Color(0, 255, 153));
         result.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         result.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -738,53 +737,6 @@ public class Calc extends javax.swing.JFrame {
     }
     
     
-    private void buttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPress
-        if(evt.getSource() instanceof javax.swing.JButton){
-            javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
-            if(validateButtonAction(button))
-                result.setText(result.getText().concat(button.getText()));
-        }
-    }//GEN-LAST:event_buttonPress
-
-    private void bitwisebuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bitwisebuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bitwisebuttonPress
-
-    private void operatorAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operatorAction
-        if(evt.getSource() instanceof javax.swing.JButton){
-            javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
-            String resultText = result.getText();
-            String buttonText = button.getText();
-            //handles open paretheses
-            // valid operators of open parenthesis is: -
-            if(resultText.matches(".*\\((\\+|\\-|\\*|\\.|\\/|\\%)*$") && !buttonText.equals("-"))
-                return;
-            
-            //handles multiple operators
-            if(resultText.matches(".*(\\+|\\-|\\*|\\.|\\/|\\%)+$")){
-                deleteActionPerformed(evt);
-                resultText = result.getText();
-            }
-            if(buttonText.matches("^(\\+|\\-|\\*|\\.|\\/|\\%)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
-                return;
-            
-            if(buttonText.matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)\\(.*"))
-                return;
-
-            if(buttonText.matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$") && resultText.matches(".*\\)(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
-                resultText = resultText.replaceAll("(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$", "");
-            
-            else if(buttonText.matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
-                resultText = "(" + resultText + ")";
-
-            result.setText(resultText.concat(buttonText));
-        }
-    }//GEN-LAST:event_operatorAction
-
-    private void notbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_notbuttonPress
-
     private void clearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllActionPerformed
         // TODO add your handling code here:
         result.setText("");
@@ -820,14 +772,6 @@ public class Calc extends javax.swing.JFrame {
         result.setText(result.getText().substring(start, result.getText().length()-endModifer));
     }//GEN-LAST:event_deleteActionPerformed
 
-    private void andbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_andbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_andbuttonPress
-
-    private void orbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_orbuttonPress
-
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() instanceof javax.swing.JButton){
@@ -850,12 +794,11 @@ public class Calc extends javax.swing.JFrame {
                 finalEquation = handleParentesis(finalEquation);
             }
             String answer = evalEquation(finalEquation);
-            
-            if(answer.matches("(true|false)")){
-                result.setText(answer);
-            } else {
+            try{
                 DecimalFormat format = new DecimalFormat("0.#############");
                 result.setText(format.format(Double.valueOf(answer)));
+            } catch(NumberFormatException  e) {
+                result.setText(answer);
             }
         }
     }//GEN-LAST:event_equalsActionPerformed
@@ -896,6 +839,21 @@ public class Calc extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_minMinbuttonPress
 
+    private void buttonAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction
+        // TODO add your handling code here:
+        if(!(evt.getSource() instanceof javax.swing.JButton))
+            return;
+        
+        javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
+        
+        if(button.getText().matches("\\d") && result.getText().matches("(true|false)"))
+            result.setText("");
+        
+        result.setText(result.getText() + button.getText());
+        
+        
+    }//GEN-LAST:event_buttonAction
+
     private String handleParentesis(String finalEquation){
         int startPos = -1, endPos = -1;
         for(int i = 0; i<finalEquation.length(); i++){
@@ -916,8 +874,8 @@ public class Calc extends javax.swing.JFrame {
     }
     
     private String evalEquation(String finalEquation){
-        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])\\-?[\\d.]+")));
-        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\+\\*\\/\\%])\\-?(?<!^)\\-?[\\+\\-\\*\\/\\%\\<\\>\\=]")));
+        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])\\-?[\\d\\.\\w]+")));
+        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?!^-)(?!(?<=\\()-)[^\\d\\.\\w]")));
         equations.removeAll(Arrays.asList(""));
         numbers.removeAll(Arrays.asList(""));
 //        numbers.replaceAll(e -> handlePercent(e));
@@ -933,49 +891,53 @@ public class Calc extends javax.swing.JFrame {
             int selPos = -1;
             Operators selOperator = Operators.ADD;
 
-            if((divPos > -1 && mulPos == -1 && modPos == -1) || (divPos < mulPos && divPos < modPos && divPos != -1 && modPos != -1)){
+            if(divPos > -1 && (divPos < mulPos || mulPos == -1) && (divPos < modPos || modPos == -1)){
                 selPos = divPos;
                 selOperator = Operators.DIV;
-            }else if((mulPos > -1 && divPos == -1 && modPos == -1) || (mulPos < divPos && mulPos < modPos && mulPos != -1 && modPos == -1)){
+            } else if(mulPos > -1 && (mulPos < divPos || divPos == -1) && (mulPos < modPos || modPos == -1)){
                 selPos = mulPos;
                 selOperator = Operators.MUL;
-            }else if((modPos > -1 && mulPos == -1 && divPos == -1) || (modPos < divPos && modPos < mulPos && mulPos != -1 && divPos != -1)){
+            } else if(modPos > -1 && (modPos < divPos || divPos == -1) && (modPos < mulPos || mulPos == -1)){
                 selPos = modPos;
                 selOperator = Operators.MOD;
-            }else if((addPos > -1 && subPos == -1) || (addPos < subPos && addPos != -1)){
+            } else if(addPos > -1 && (addPos < subPos || subPos == -1)){
                 selPos = addPos;
                 selOperator = Operators.ADD;
-            }else if((subPos > -1 && addPos == -1) || (subPos < addPos && subPos != -1)){
+            } else if(subPos > -1 && (subPos < addPos || addPos == -1)){
                 selPos = subPos;
                 selOperator = Operators.SUB;
+            } else if (equations.get(0).equals(">")){
+                selOperator = Operators.GT;
+
+            } else if (equations.get(0).equals("<")){
+                selOperator = Operators.LT;
+
+            } else if (equations.get(0).equals(">=")){
+                selOperator = Operators.GE;
+
+            } else if (equations.get(0).equals("<=")){
+                selOperator = Operators.LE;
+
+            } else if (equations.get(0).equals("==")){
+                selOperator = Operators.ET;
+
+            } else if (equations.get(0).equals("!=")){
+                selOperator = Operators.NET;
+
             }
             
-            if(equations.get(0).matches("^(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
+            if(selOperator.ordinal() > 4)
                 selPos = 0;
             
-            switch (equations.get(0)) {
-                case ">":
-                    selOperator = Operators.GT;
-                    break;
-                case "<":
-                    selOperator = Operators.LT;
-                    break;
-                case ">=":
-                    selOperator = Operators.GE;
-                    break;
-                case "<=":
-                    selOperator = Operators.LE;
-                    break;
-                case "==":
-                    selOperator = Operators.ET;
-                    break;
-                case "!=":
-                    selOperator = Operators.NET;
-                    break;
-            }
+            
             System.out.println(numbers);
             System.out.println(equations);
-            numbers.set(selPos, calculateEquation(selPos, numbers, selOperator));
+            try {
+                numbers.set(selPos, calculateEquation(numbers.get(selPos), numbers.get(selPos+1), selOperator));
+            } catch (Exception e) {
+                numbers.set(0, "Invalid Equation");
+                break;
+            }
             System.out.println(numbers.get(selPos));
 
             equations.remove(selPos);
@@ -1015,28 +977,27 @@ public class Calc extends javax.swing.JFrame {
 //        return e;
 //    }
     
-    private String calculateEquation(int pos, List<String> numbers, Operators a ) {
-        Double num1 = Double.valueOf(numbers.get(pos));
-        Double num2 = Double.valueOf(numbers.get(pos+1));
+    
+    private String calculateEquation(String num1, String num2, Operators a ) {
         switch (a) {
             case MUL:
-                return String.valueOf(num1 * num2);
+                return String.valueOf(Double.valueOf(num1) * Double.valueOf(num2));
             case DIV:
-                return String.valueOf(num1 / num2);
+                return String.valueOf(Double.valueOf(num1) / Double.valueOf(num2));
             case ADD:
-                return String.valueOf(num1 + num2);
+                return String.valueOf(Double.valueOf(num1) + Double.valueOf(num2));
             case SUB:
-                return String.valueOf(num1 - num2);
+                return String.valueOf(Double.valueOf(num1) - Double.valueOf(num2));
             case MOD:
-                return String.valueOf(num1 % num2);
+                return String.valueOf(Double.valueOf(num1) % Double.valueOf(num2));
             case LT:
-                return String.valueOf(num1 < num2);
+                return String.valueOf(Double.valueOf(num1) < Double.valueOf(num2));
             case GT:
-                return String.valueOf(num1 > num2);
+                return String.valueOf(Double.valueOf(num1) > Double.valueOf(num2));
             case LE:
-                return String.valueOf(num1 <= num2);
+                return String.valueOf(Double.valueOf(num1) <= Double.valueOf(num2));
             case GE:
-                return String.valueOf(num1 >= num2);
+                return String.valueOf(Double.valueOf(num1) >= Double.valueOf(num2));
             case ET:
                 return String.valueOf(num1.equals(num2));
             case NET:
