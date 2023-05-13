@@ -672,11 +672,6 @@ public class Calc extends javax.swing.JFrame {
         result.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         result.setCaretColor(new java.awt.Color(0, 255, 153));
         result.setDisabledTextColor(new java.awt.Color(204, 204, 204));
-        result.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resultActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout resultPanelLayout = new javax.swing.GroupLayout(resultPanel);
         resultPanel.setLayout(resultPanelLayout);
@@ -756,20 +751,14 @@ public class Calc extends javax.swing.JFrame {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-        String resultText = result.getText();
-        int start = 0;
-        int endModifer = 1;
-        if(resultText.equals(""))
+        int endModifier = 1;
+        if(result.getText().equals(""))
             return;
-        if(resultText.matches(".*(\\>|\\<)$")){
-            start++;
-            endModifer++;
-        } else if (resultText.matches(".*^(\\=\\=|\\!\\=|\\<\\=|\\>\\=)$$")){
-            start++;
-            endModifer += 2;
-        }
+        if(result.getText().matches(".*([\\+\\-\\*\\/\\<\\>\\=\\!]=|\\+\\+|\\-\\-|\\&\\&|\\!\\(|\\|\\|)$"))
+            endModifier++;
+        
 
-        result.setText(result.getText().substring(start, result.getText().length()-endModifer));
+        result.setText(result.getText().substring(0, result.getText().length()-endModifier));
     }//GEN-LAST:event_deleteActionPerformed
 
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
@@ -802,10 +791,6 @@ public class Calc extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_equalsActionPerformed
-
-    private void resultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resultActionPerformed
 
     private void assignDivbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignDivbuttonPress
         // TODO add your handling code here:
@@ -923,7 +908,6 @@ public class Calc extends javax.swing.JFrame {
 
             } else if (equations.get(0).equals("!=")){
                 selOperator = Operators.NET;
-
             }
             
             if(selOperator.ordinal() > 4)
@@ -963,12 +947,12 @@ public class Calc extends javax.swing.JFrame {
         MUL, 
         DIV, 
         MOD, 
-        LT, // Less than
-        GT, // Greater than
-        ET, // Equals to
-        LE, // Less than or Equals to
-        GE, // Greater than or Equals to
-        NET // Not Equals to
+        LT,     // Less than
+        GT,     // Greater than
+        ET,     // Equals to
+        LE,     // Less than or Equals to
+        GE,     // Greater than or Equals to
+        NET,    // Not Equals to
     };
     
 //    private String handlePercent(String e){
