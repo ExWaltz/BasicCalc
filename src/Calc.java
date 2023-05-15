@@ -915,6 +915,15 @@ public class Calc extends javax.swing.JFrame {
 
             } else if (equations.get(0).equals("!=")){
                 selOperator = Operators.NET;
+                
+            } else if (equations.get(0).equals("&&")){
+                selOperator = Operators.AND;
+
+            } else if (equations.get(0).equals("^")){
+                selOperator = Operators.BIT;
+
+            } else if (equations.get(0).equals("||")){
+                selOperator = Operators.OR;
             }
             
             if(selOperator.ordinal() > 4)
@@ -960,6 +969,9 @@ public class Calc extends javax.swing.JFrame {
         LE,     // Less than or Equals to
         GE,     // Greater than or Equals to
         NET,    // Not Equals to
+        OR,     // Logical OR
+        AND,    // Logical AND
+        BIT,    // Logical Bitwise
     };
     
 //    private String handlePercent(String e){
@@ -993,6 +1005,12 @@ public class Calc extends javax.swing.JFrame {
                 return String.valueOf(num1.equals(num2));
             case NET:
                 return String.valueOf(!num1.equals(num2));
+            case OR:
+                return String.valueOf(Boolean.valueOf(num1) || Boolean.valueOf(num2));
+            case AND:
+                return String.valueOf(Boolean.valueOf(num1) && Boolean.valueOf(num2));
+            case BIT:
+                return String.valueOf(Boolean.valueOf(num1) ^ Boolean.valueOf(num2));
             default:
                 throw new AssertionError();
         }
