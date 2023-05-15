@@ -706,7 +706,7 @@ public class Calc extends javax.swing.JFrame {
         if(lastNum.matches(".*\\..*") && button.getText().equals("."))
             return false;
 
-        // handle possible errors in close parentheses
+        // handle possible errors in close parenthesis
         //  - Check if there there is an open parenthesis to close
         //  - Check if the last symbol in the equation isn't +, -, *, /, (
         if((isBalanced(result.getText()) || result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$")) && button.getText().equals(")"))
@@ -717,7 +717,7 @@ public class Calc extends javax.swing.JFrame {
 //        if(result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$") && button.getText().equals("%"))
 //            return false;
 
-        // handle possible errors in open parentheses
+        // handle possible errors in open parenthesis
         //  - If the last symbol is a digit or ) then imply that it is multiplication
         if(result.getText().matches(".*(\\d|\\))$") && button.getText().equals("("))
             result.setText(result.getText().concat("*"));
@@ -780,7 +780,7 @@ public class Calc extends javax.swing.JFrame {
             }
 
             if(finalEquation.matches(".*\\(.*")){
-                finalEquation = handleParentesis(finalEquation);
+                finalEquation = handleParenthesis(finalEquation);
             }
             String answer = evalEquation(finalEquation);
             try{
@@ -839,7 +839,7 @@ public class Calc extends javax.swing.JFrame {
         
     }//GEN-LAST:event_buttonAction
 
-    private String handleParentesis(String finalEquation){
+    private String handleParenthesis(String finalEquation){
         int startPos = -1, endPos = -1;
         for(int i = 0; i<finalEquation.length(); i++){
             if(startPos != -1 && endPos != -1)
@@ -849,12 +849,19 @@ public class Calc extends javax.swing.JFrame {
             else if (String.valueOf(finalEquation.charAt(i)).endsWith(")"))
                 endPos = i;
         }
+        
+        String startParenthesis = "(";
         String focus = finalEquation.substring(startPos+1, endPos);
-        String result = evalEquation(focus);
-        finalEquation = finalEquation.replace("("+focus+")", result);
+        String resultEquation = evalEquation(focus);
+        
+        if(startPos > 0 && finalEquation.charAt(startPos-1) == '!'){
+            startParenthesis = "!" + startParenthesis;
+            resultEquation = String.valueOf(!Boolean.valueOf(resultEquation));
+        }
+        finalEquation = finalEquation.replace(startParenthesis.concat(focus).concat(")"), resultEquation);
         System.out.println(finalEquation);
         if(finalEquation.matches(".*\\(.*"))
-            finalEquation = handleParentesis(finalEquation);
+            finalEquation = handleParenthesis(finalEquation);
         return  finalEquation;
     }
     
