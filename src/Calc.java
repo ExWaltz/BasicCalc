@@ -692,46 +692,6 @@ public class Calc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private boolean validateButtonAction(javax.swing.JButton button){
-            
-        // handle illegal placement of numbers and decimals
-        //  - Check if the last symbol isn't % or )
-        if(result.getText().matches(".*[\\)]$") && button.getText().matches("^[0-9\\.]$"))
-            return false;
-
-        // handle multiple decimals
-        //  - Check if there isn't another decimal in the last number
-
-        String lastNum = result.getText().replaceAll("^[^-].*(?<![\\(])[\\+\\/\\*\\%\\-]+", "");
-        if(lastNum.matches(".*\\..*") && button.getText().equals("."))
-            return false;
-
-        // handle possible errors in close parenthesis
-        //  - Check if there there is an open parenthesis to close
-        //  - Check if the last symbol in the equation isn't +, -, *, /, (
-        if((isBalanced(result.getText()) || result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$")) && button.getText().equals(")"))
-            return false;
-
-        // handle possible errors in percentage
-        //  - Check if the last symbol ends isn't +, -, *, /, (, %
-//        if(result.getText().matches(".*[\\+\\-\\*\\/\\(\\%]$") && button.getText().equals("%"))
-//            return false;
-
-        // handle possible errors in open parenthesis
-        //  - If the last symbol is a digit or ) then imply that it is multiplication
-        if(result.getText().matches(".*(\\d|\\))$") && button.getText().equals("("))
-            result.setText(result.getText().concat("*"));
-        
-        if(result.getText().matches(".*(\\=\\=|\\!\\=|\\>|\\<|\\<\\=|\\>\\=)$"))
-            result.setText(result.getText().concat("("));
-        
-        if(result.getText().matches("(true|false)"))
-            result.setText("");
-
-        return true;
-    }
-    
-    
     private void clearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllActionPerformed
         // TODO add your handling code here:
         result.setText("");
@@ -754,8 +714,14 @@ public class Calc extends javax.swing.JFrame {
         int endModifier = 1;
         if(result.getText().equals(""))
             return;
-        if(result.getText().matches(".*([\\+\\-\\*\\/\\<\\>\\=\\!]=|\\+\\+|\\-\\-|\\&\\&|\\!\\(|\\|\\|)$"))
-            endModifier++;
+        if(result.getText().matches(".*([\\+\\-\\*\\/\\<\\>\\=\\!]=|\\+\\+|\\-\\-|\\|\\||\\&\\&|\\!\\()$"))
+            endModifier = 2;
+        
+        if(result.getText().matches(".*true$"))
+            endModifier = 4;
+        
+        if(result.getText().matches(".*false"))
+            endModifier = 5;
         
 
         result.setText(result.getText().substring(0, result.getText().length()-endModifier));
@@ -768,11 +734,6 @@ public class Calc extends javax.swing.JFrame {
             System.out.println(finalEquation);
             if(finalEquation.isEmpty()){
                 return;
-            }
-
-            if(finalEquation.matches(".*[\\+\\-\\*\\.\\/\\%]+$")){
-                deleteActionPerformed(evt);
-                finalEquation = result.getText();
             }
 
             while(!isBalanced(finalEquation)){
