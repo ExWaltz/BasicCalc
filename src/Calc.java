@@ -754,8 +754,14 @@ public class Calc extends javax.swing.JFrame {
         int endModifier = 1;
         if(result.getText().equals(""))
             return;
-        if(result.getText().matches(".*([\\+\\-\\*\\/\\<\\>\\=\\!]=|\\+\\+|\\-\\-|\\&\\&|\\!\\(|\\|\\|)$"))
-            endModifier++;
+        if(result.getText().matches(".*([\\+\\-\\*\\/\\<\\>\\=\\!]=|\\+\\+|\\-\\-|\\|\\||\\&\\&|\\!\\()$"))
+            endModifier = 2;
+        
+        if(result.getText().matches(".*true$"))
+            endModifier = 4;
+        
+        if(result.getText().matches(".*false"))
+            endModifier = 5;
         
 
         result.setText(result.getText().substring(0, result.getText().length()-endModifier));
