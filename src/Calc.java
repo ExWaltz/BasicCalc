@@ -7,6 +7,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.HashMap;
+import javax.swing.JOptionPane;
 
 public class Calc extends javax.swing.JFrame {
 
@@ -437,7 +439,7 @@ public class Calc extends javax.swing.JFrame {
         assignDiv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         assignDiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignDivbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -448,7 +450,7 @@ public class Calc extends javax.swing.JFrame {
         assignment.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         assignment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignmentbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -459,7 +461,7 @@ public class Calc extends javax.swing.JFrame {
         assignAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         assignAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignAddbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -470,7 +472,7 @@ public class Calc extends javax.swing.JFrame {
         assignMul.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         assignMul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignMulbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -481,7 +483,7 @@ public class Calc extends javax.swing.JFrame {
         assignMin.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         assignMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignMinbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -492,7 +494,7 @@ public class Calc extends javax.swing.JFrame {
         assignMod.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         assignMod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignModbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -503,7 +505,7 @@ public class Calc extends javax.swing.JFrame {
         addAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         addAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addAddbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -514,7 +516,7 @@ public class Calc extends javax.swing.JFrame {
         minMin.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         minMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                minMinbuttonPress(evt);
+                buttonAction(evt);
             }
         });
 
@@ -705,7 +707,7 @@ public class Calc extends javax.swing.JFrame {
         String newEquation = result.getText().replaceAll("([\\d\\)]|\\(\\-)+$", "");
         if(lastNum.matches(".*\\(-[\\d\\.]+\\)$"))
             result.setText(newEquation.concat(lastNum.substring(2,lastNum.length()-1)));
-        else if(lastNum.matches("[\\d\\.\\%]+$"))
+        else if(lastNum.matches("[\\d\\.]+$"))
             result.setText(newEquation.concat("(-").concat(lastNum).concat(")"));
     }//GEN-LAST:event_negationAction
 
@@ -735,55 +737,36 @@ public class Calc extends javax.swing.JFrame {
             if(finalEquation.isEmpty()){
                 return;
             }
+            
+            finalEquation = finalEquation.replaceAll(" ", "");
+            
+            finalEquation = finalEquation.replaceAll("\\W+$", "");
+            finalEquation = finalEquation.replaceAll("^[\\)]", "");
+
+
+            finalEquation = finalEquation.replaceAll("\\)\\(", ")*(");
+            
 
             while(!isBalanced(finalEquation)){
                 finalEquation += ")";
             }
-
-            if(finalEquation.matches(".*\\(.*")){
+            
+            if(finalEquation.matches(".*\\(.+")){
                 finalEquation = handleParenthesis(finalEquation);
             }
-            String answer = evalEquation(finalEquation);
+            String answer = "";
+            
             try{
-                DecimalFormat format = new DecimalFormat("0.#############");
+                answer = evalEquation(finalEquation);
                 result.setText(format.format(Double.valueOf(answer)));
             } catch(NumberFormatException  e) {
                 result.setText(answer);
+            } catch (InvalidEquationException e){
+                showErrorDialog(e.getMessage());
+                result.setText("");
             }
         }
     }//GEN-LAST:event_equalsActionPerformed
-
-    private void assignDivbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignDivbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_assignDivbuttonPress
-
-    private void assignmentbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignmentbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_assignmentbuttonPress
-
-    private void assignAddbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignAddbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_assignAddbuttonPress
-
-    private void assignMulbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignMulbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_assignMulbuttonPress
-
-    private void assignMinbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignMinbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_assignMinbuttonPress
-
-    private void assignModbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignModbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_assignModbuttonPress
-
-    private void addAddbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAddbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addAddbuttonPress
-
-    private void minMinbuttonPress(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minMinbuttonPress
-        // TODO add your handling code here:
-    }//GEN-LAST:event_minMinbuttonPress
 
     private void buttonAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction
         // TODO add your handling code here:
@@ -800,6 +783,9 @@ public class Calc extends javax.swing.JFrame {
         
     }//GEN-LAST:event_buttonAction
 
+    private void showErrorDialog(String e){
+        JOptionPane.showMessageDialog(this, e, "Error Message", JOptionPane.ERROR_MESSAGE);
+    }
     private String handleParenthesis(String finalEquation){
         int startPos = -1, endPos = -1;
         for(int i = 0; i<finalEquation.length(); i++){
@@ -813,7 +799,13 @@ public class Calc extends javax.swing.JFrame {
         
         String startParenthesis = "(";
         String focus = finalEquation.substring(startPos+1, endPos);
-        String resultEquation = evalEquation(focus);
+        String resultEquation;
+        try {
+            resultEquation = evalEquation(focus);
+        } catch (InvalidEquationException e) {
+            showErrorDialog(e.getMessage());
+            return "";            
+        }
         
         if(startPos > 0 && finalEquation.charAt(startPos-1) == '!'){
             startParenthesis = "!" + startParenthesis;
@@ -826,12 +818,26 @@ public class Calc extends javax.swing.JFrame {
         return  finalEquation;
     }
     
-    private String evalEquation(String finalEquation){
-        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])\\-?[\\d\\.\\w]+")));
-        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?!^-)(?!(?<=\\()-)[^\\d\\.\\w]")));
+    private String handleVariables(String e){
+        String varValue = variables.get(e);
+        if(varValue != null)
+            return varValue;
+        return e;
+    }
+   
+    
+    private String evalEquation(String finalEquation) throws InvalidEquationException{
+        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])\\-?[\\d\\.\\w\\s]+")));
+        List<String> numbers = new ArrayList<>(Arrays.asList(finalEquation.split("(?!^-)(?!(?<=\\()-)[^\\d\\.\\w\\s]")));
+        
         equations.removeAll(Arrays.asList(""));
         numbers.removeAll(Arrays.asList(""));
-//        numbers.replaceAll(e -> handlePercent(e));
+
+        numbers.replaceAll(e -> e.replaceAll("\\.0*$", ""));
+        
+        if(numbers.isEmpty())
+            return "";
+
         
         //Handle operations 
         while(numbers.size() > 1){
@@ -842,7 +848,7 @@ public class Calc extends javax.swing.JFrame {
             int modPos = equations.indexOf("%");
             
             int selPos = -1;
-            Operators selOperator = Operators.ADD;
+            Operators selOperator;
 
             if(divPos > -1 && (divPos < mulPos || mulPos == -1) && (divPos < modPos || modPos == -1)){
                 selPos = divPos;
@@ -885,26 +891,51 @@ public class Calc extends javax.swing.JFrame {
 
             } else if (equations.get(0).equals("||")){
                 selOperator = Operators.OR;
+                
+            } else if (equations.get(0).equals("=")){
+                selOperator = Operators.ASSIGN;
+
+            } else if (equations.get(0).equals("+=")){
+                selOperator = Operators.AADD;
+
+            } else if (equations.get(0).equals("-=")){
+                selOperator = Operators.ASUB;
+                
+            } else if (equations.get(0).equals("*=")){
+                selOperator = Operators.AMUL;
+
+            } else if (equations.get(0).equals("/=")){
+                selOperator = Operators.ADIV;
+
+            } else if (equations.get(0).equals("%=")){
+                selOperator = Operators.AMOD;
+            } else {
+                throw  new InvalidEquationException();
             }
             
-            if(selOperator.ordinal() > 4)
+            
+            if(selOperator.ordinal() > 5)
                 selPos = 0;
-            
-            
+  
             System.out.println(numbers);
             System.out.println(equations);
             try {
                 numbers.set(selPos, calculateEquation(numbers.get(selPos), numbers.get(selPos+1), selOperator));
-            } catch (Exception e) {
-                numbers.set(0, "Invalid Equation");
-                break;
-            }
-            System.out.println(numbers.get(selPos));
+            } catch (NoSuchVariableException | ArithmeticException | LogicalFormatException | InequalityFormatException e) {
+                showErrorDialog(e.getMessage());
 
+                return "";
+            }
+            
+            if(selOperator.ordinal() > 13)
+                break;
+            
             equations.remove(selPos);
             numbers.remove(selPos+1);
         }
-        return numbers.get(0);
+//       
+
+        return handleVariables(numbers.get(0));
     }
     
     private boolean isBalanced(String str){
@@ -919,20 +950,26 @@ public class Calc extends javax.swing.JFrame {
     }
     
     private enum Operators {
-        ADD, 
-        SUB, 
-        MUL, 
-        DIV, 
-        MOD, 
-        LT,     // Less than
-        GT,     // Greater than
-        ET,     // Equals to
-        LE,     // Less than or Equals to
-        GE,     // Greater than or Equals to
-        NET,    // Not Equals to
-        OR,     // Logical OR
-        AND,    // Logical AND
-        BIT,    // Logical Bitwise
+        ADD,    // + Addition
+        SUB,    // - Subtraction
+        MUL,    // * Multiplication
+        DIV,    // / Division
+        MOD,    // % Modulus
+        LT,     // < Less than
+        GT,     // > Greater than
+        LE,     // <= Less than or Equals to
+        GE,     // >= Greater than or Equals to
+        ET,     // == Equals to
+        NET,    // != Not Equals to
+        OR,     // || Logical OR
+        AND,    // && Logical AND
+        BIT,    // ^ Logical Bitwise
+        ASSIGN, // = Assignment
+        AADD,   // += Assign Add
+        ASUB,   // += Assign Subtract
+        AMUL,   // *= Assign Multiply
+        ADIV,   // /= Assign Divided
+        AMOD    // %= Assign Modulus
     };
     
 //    private String handlePercent(String e){
@@ -941,8 +978,89 @@ public class Calc extends javax.swing.JFrame {
 //        return e;
 //    }
     
+    class NoSuchVariableException extends Exception{
+
+        public NoSuchVariableException() {
+            super("Variable does not Exists");
+        }
+
+    }
     
-    private String calculateEquation(String num1, String num2, Operators a ) {
+    class ArithmeticException extends Exception{
+
+        public ArithmeticException() {
+            super("Atemptted to do arithmetic operation on a non double");
+        }
+
+    }
+    
+    class LogicalFormatException extends Exception{
+
+        public LogicalFormatException() {
+            super("Atemptted to do logical operation on a non boolean");
+        }
+
+    }
+    
+    class InequalityFormatException extends Exception{
+
+        public InequalityFormatException() {
+            super("Atemptted to do inequality operation on a non digit");
+        }
+
+    }
+    
+    class InvalidEquationException extends Exception{
+
+        public InvalidEquationException() {
+            super("Invalid Equation");
+        }
+
+    }
+    
+    
+    private String calculateEquation(String num1, String num2, Operators a) 
+            throws NoSuchVariableException, ArithmeticException, LogicalFormatException, InequalityFormatException{
+        
+        // If the first number is a variable; convert to its value; else return the usual value
+        // If the usual value is a non Digit after the conversion; the variable does not exists
+        //
+        
+        if(a.ordinal() < 14){
+            num1 = handleVariables(num1);
+            
+            if(num1.matches("^(?!(true|false))\\D+$"))
+                throw new NoSuchVariableException();
+        }
+        
+                if(a.ordinal() < 5 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
+            throw new ArithmeticException();
+            
+        if(a.ordinal() > 4 && a.ordinal() < 9 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
+            throw new InequalityFormatException();
+        
+        if(a.ordinal() > 10 && a.ordinal() < 14 && (!num1.matches("^(true|false)$") || !num2.matches("^(true|false)$")))
+            throw new LogicalFormatException();
+        
+        // If the second number is a variable; convert to its value; else return the usual value
+        // If the usual value is a non Digit after the conversion; the variable does not exists
+        num2 = handleVariables(num2);
+        if(num2.matches("^(?!(true|false))\\D+$"))
+            throw new NoSuchVariableException();
+        
+
+        Double varNum = null;
+        
+        if(a.ordinal() > 14){
+            try {
+                varNum = Double.valueOf(variables.get(num1));
+            } catch (NumberFormatException e) {
+                throw new ArithmeticException();
+            } catch (NullPointerException e) {
+                throw new NoSuchVariableException();
+            }
+        }
+        
         switch (a) {
             case MUL:
                 return String.valueOf(Double.valueOf(num1) * Double.valueOf(num2));
@@ -972,9 +1090,29 @@ public class Calc extends javax.swing.JFrame {
                 return String.valueOf(Boolean.valueOf(num1) && Boolean.valueOf(num2));
             case BIT:
                 return String.valueOf(Boolean.valueOf(num1) ^ Boolean.valueOf(num2));
+            case ASSIGN:
+                variables.put(num1, handleVariables(num2));
+                break;
+            case AADD:
+                variables.put(num1, format.format(varNum + Double.valueOf(num2)));
+                break;
+            case ASUB:
+                variables.put(num1, format.format(varNum - Double.valueOf(num2)));
+                break;
+            case AMUL:
+                variables.put(num1, format.format(varNum * Double.valueOf(num2)));
+                break;
+            case ADIV:
+                variables.put(num1, format.format(varNum / Double.valueOf(num2)));
+                break;
+            case AMOD:
+                variables.put(num1, format.format(varNum % Double.valueOf(num2)));
+                break;
             default:
                 throw new AssertionError();
         }
+
+        return "";
     }
     
     
@@ -1015,14 +1153,17 @@ public class Calc extends javax.swing.JFrame {
         });
     }
     
+    
+    private final HashMap<String, String> variables = new HashMap<>();
+    private final DecimalFormat format = new DecimalFormat("0.#############");
+
+    
     private final java.awt.Color numColor = new java.awt.Color(57, 72, 103);
     private final java.awt.Color operatorColor = new java.awt.Color(33, 42, 62);
     private final java.awt.Color equalColor = new java.awt.Color(230, 57, 70);
     private final java.awt.Color backgroundColor = new java.awt.Color(29, 53, 87);
     private final java.awt.Color clearColor = new java.awt.Color(69, 123, 157);
-    
     private final java.awt.Color textColor =  new java.awt.Color(241, 246, 249);
-//    new java.awt.Font("Montserrat", 0, 14)
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addAdd;
