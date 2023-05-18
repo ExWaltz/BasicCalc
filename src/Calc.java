@@ -699,18 +699,6 @@ public class Calc extends javax.swing.JFrame {
         result.setText("");
     }//GEN-LAST:event_clearAllActionPerformed
 
-    private void negationAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negationAction
-        // TODO add your handling code here:
-        String lastNum = result.getText().replaceAll("^[^-].*(?<![\\(])[\\+\\/\\*\\%\\-]+", "");
-        if (lastNum.isEmpty())
-            return;
-        String newEquation = result.getText().replaceAll("([\\d\\)]|\\(\\-)+$", "");
-        if(lastNum.matches(".*\\(-[\\d\\.]+\\)$"))
-            result.setText(newEquation.concat(lastNum.substring(2,lastNum.length()-1)));
-        else if(lastNum.matches("[\\d\\.]+$"))
-            result.setText(newEquation.concat("(-").concat(lastNum).concat(")"));
-    }//GEN-LAST:event_negationAction
-
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
         int endModifier = 1;
@@ -782,6 +770,18 @@ public class Calc extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_buttonAction
+
+    private void negationAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negationAction
+        // TODO add your handling code here:
+        String lastNum = result.getText().replaceAll("^[^-].*(?<![\\(])[\\+\\/\\*\\%\\-]+", "");
+        if (lastNum.isEmpty())
+            return;
+        String newEquation = result.getText().replaceAll("([\\d\\.\\)]|\\(\\-)+$", "");
+        if(lastNum.matches(".*\\(-[\\d\\.]+\\)$"))
+            result.setText(newEquation.concat(lastNum.substring(2,lastNum.length()-1)));
+        else if(lastNum.matches("[\\d\\.]+$"))
+            result.setText(newEquation.concat("(-").concat(lastNum).concat(")"));
+    }//GEN-LAST:event_negationAction
 
     private void showErrorDialog(String e){
         JOptionPane.showMessageDialog(this, e, "Error Message", JOptionPane.ERROR_MESSAGE);
@@ -921,7 +921,7 @@ public class Calc extends javax.swing.JFrame {
             System.out.println(equations);
             try {
                 numbers.set(selPos, calculateEquation(numbers.get(selPos), numbers.get(selPos+1), selOperator));
-            } catch (NoSuchVariableException | ArithmeticException | LogicalFormatException | InequalityFormatException e) {
+            } catch (NoSuchVariableException | ArithmeticException | LogicalFormatException | InequalityFormatException | InvalidNameException e) {
                 showErrorDialog(e.getMessage());
 
                 return "";
@@ -1018,9 +1018,17 @@ public class Calc extends javax.swing.JFrame {
 
     }
     
+    class InvalidNameException extends Exception{
+
+        public InvalidNameException() {
+            super("Bad variable name");
+        }
+
+    }
+    
     
     private String calculateEquation(String num1, String num2, Operators a) 
-            throws NoSuchVariableException, ArithmeticException, LogicalFormatException, InequalityFormatException{
+            throws NoSuchVariableException, ArithmeticException, LogicalFormatException, InequalityFormatException, InvalidNameException{
         
         // If the first number is a variable; convert to its value; else return the usual value
         // If the usual value is a non Digit after the conversion; the variable does not exists
@@ -1031,6 +1039,8 @@ public class Calc extends javax.swing.JFrame {
             
             if(num1.matches("^(?!(true|false))\\D+$"))
                 throw new NoSuchVariableException();
+            if(!num1.matches("^(?!(true|false))(?![^a-zA-Z_])\\w+$"))
+                throw new InvalidNameException();
         }
         
                 if(a.ordinal() < 5 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
