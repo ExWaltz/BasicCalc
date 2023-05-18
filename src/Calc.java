@@ -1034,13 +1034,16 @@ public class Calc extends javax.swing.JFrame {
         // If the usual value is a non Digit after the conversion; the variable does not exists
         //
         
+        if(a.ordinal() == 14){
+            if(!num1.matches("^(?!(true|false))(?![^a-zA-Z_])\\w+$"))
+                throw new InvalidNameException();
+        }
+        
         if(a.ordinal() < 14){
             num1 = handleVariables(num1);
             
             if(num1.matches("^(?!(true|false))\\D+$"))
                 throw new NoSuchVariableException();
-            if(!num1.matches("^(?!(true|false))(?![^a-zA-Z_])\\w+$"))
-                throw new InvalidNameException();
         }
         
                 if(a.ordinal() < 5 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
