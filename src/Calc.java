@@ -717,39 +717,43 @@ public class Calc extends javax.swing.JFrame {
         result.setText(result.getText().substring(0, result.getText().length()-endModifier));
     }//GEN-LAST:event_deleteActionPerformed
 
+    private String cleanEquation(String finalEquation) throws LogicalFormatException, InvalidEquationException{
+        // remove trailing operators and spaces.
+        finalEquation = finalEquation.replaceAll("(?!\\+\\+|\\-\\-)[^\\w\\)\\.]+$(?<!\\+\\+|\\-\\-)| ", "");
+
+        // fix all parenthesis
+        finalEquation = finalEquation.replaceAll("(?<=[\\w\\)])\\(", "*(");
+        finalEquation = finalEquation.replaceAll("\\)(?=[\\w])", ")*");
+
+        // add closing parenthesis
+        while(!isBalanced(finalEquation)){
+            finalEquation += ")";
+        }
+
+        if(finalEquation.matches(".*\\(.+")){
+            finalEquation = handleParenthesis(finalEquation);
+        }
+        return finalEquation;
+    }
+    
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() instanceof javax.swing.JButton){
             String finalEquation = result.getText();
-            System.out.println(finalEquation);
-            if(finalEquation.isEmpty()){
-                return;
-            }
-            
-            finalEquation = finalEquation.replaceAll(" ", "");
-            
-            finalEquation = finalEquation.replaceAll("\\W+$", "");
-            finalEquation = finalEquation.replaceAll("^[\\)]", "");
-
-
-            finalEquation = finalEquation.replaceAll("\\)\\(", ")*(");
-            
-
-            while(!isBalanced(finalEquation)){
-                finalEquation += ")";
-            }
-            
-            if(finalEquation.matches(".*\\(.+")){
-                finalEquation = handleParenthesis(finalEquation);
-            }
             String answer = "";
-            
+
+            System.out.println(finalEquation);
+
             try{
+                finalEquation = cleanEquation(finalEquation);
+                if(finalEquation.isEmpty()){
+                    return;
+                }
                 answer = evalEquation(finalEquation);
                 result.setText(format.format(Double.valueOf(answer)));
-            } catch(NumberFormatException | ArithmeticException e) {
+            } catch(NumberFormatException e) { // if the result is true or false
                 result.setText(answer);
-            } catch (InvalidEquationException e){
+            } catch (InvalidEquationException | ArithmeticException | LogicalFormatException| NoSuchVariableException e){
                 showErrorDialog(e.getMessage());
                 result.setText("");
             }
@@ -786,7 +790,7 @@ public class Calc extends javax.swing.JFrame {
     private void showErrorDialog(String e){
         JOptionPane.showMessageDialog(this, e, "Error Message", JOptionPane.ERROR_MESSAGE);
     }
-    private String handleParenthesis(String finalEquation){
+    private String handleParenthesis(String finalEquation) throws LogicalFormatException{
         int startPos = -1, endPos = -1;
         for(int i = 0; i<finalEquation.length(); i++){
             if(startPos != -1 && endPos != -1)
@@ -802,12 +806,14 @@ public class Calc extends javax.swing.JFrame {
         String resultEquation;
         try {
             resultEquation = evalEquation(focus);
-        } catch (InvalidEquationException | ArithmeticException e) {
+        } catch (InvalidEquationException | ArithmeticException | NoSuchVariableException e) {
             showErrorDialog(e.getMessage());
             return "";            
         }
         
         if(startPos > 0 && finalEquation.charAt(startPos-1) == '!'){
+            if(!resultEquation.matches("true|false"))
+                throw new LogicalFormatException();
             startParenthesis = "!" + startParenthesis;
             resultEquation = String.valueOf(!Boolean.valueOf(resultEquation));
         }
@@ -837,7 +843,7 @@ public class Calc extends javax.swing.JFrame {
     }
    
     
-    private String evalEquation(String finalEquation) throws InvalidEquationException, ArithmeticException{
+    private String evalEquation(String finalEquation) throws InvalidEquationException, ArithmeticException, NoSuchVariableException{
 //        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])\\-?[\\d\\.\\w\\s]+")));
         List<String> operatorList = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\w\\) ])\\-?[\\w.]+")));
         List<String> numbersList = new ArrayList<>(Arrays.asList(finalEquation.split("(?!^-)(?!(?<=[\\W])-)[^\\.\\w\\s]")));
@@ -849,60 +855,99 @@ public class Calc extends javax.swing.JFrame {
         
         if(numbersList.isEmpty())
             return "";
-
+        
         
         //Handle operations 
-        while(numbersList.size() > 1){
+        do{
+            if(numbersList.size() == 1 && (operatorList.isEmpty() || !operatorList.get(0).matches("^(\\+\\+|\\-\\-)$")))
+                break;
+            // TODO: Improve this part. Make a fuction that returms a list of operation order
             int mulPos = operatorList.indexOf("*");
             int divPos = operatorList.indexOf("/");
             int addPos = operatorList.indexOf("+");
             int subPos = operatorList.indexOf("-");
             int modPos = operatorList.indexOf("%");
+            int gtPos = operatorList.indexOf(">");
+            int ltPos = operatorList.indexOf("<");
+            int gePos = operatorList.indexOf(">=");
+            int lePos = operatorList.indexOf("<=");
+            int eqPos = operatorList.indexOf("==");
+            int nePos = operatorList.indexOf("!=");
+            int orPos = operatorList.indexOf("||");
+            int btPos = operatorList.indexOf("^");
+            int adPos = operatorList.indexOf("&&");
+            int aaPos = operatorList.indexOf("++");
+            int mmPos = operatorList.indexOf("--");
             
             int selPos = -1;
-            Operators selOperator;
+            boolean removeSecondTerm = true;
+            Operators selOperator = null;
 
             if(divPos > -1 && (divPos < mulPos || mulPos == -1) && (divPos < modPos || modPos == -1)){
                 selPos = divPos;
                 selOperator = Operators.DIV;
+                
             } else if(mulPos > -1 && (mulPos < divPos || divPos == -1) && (mulPos < modPos || modPos == -1)){
                 selPos = mulPos;
                 selOperator = Operators.MUL;
+                
             } else if(modPos > -1 && (modPos < divPos || divPos == -1) && (modPos < mulPos || mulPos == -1)){
                 selPos = modPos;
                 selOperator = Operators.MOD;
+                
             } else if(addPos > -1 && (addPos < subPos || subPos == -1)){
                 selPos = addPos;
                 selOperator = Operators.ADD;
+                
             } else if(subPos > -1 && (subPos < addPos || addPos == -1)){
                 selPos = subPos;
                 selOperator = Operators.SUB;
-            } else if (operatorList.get(0).equals(">")){
+                
+            } else if (gtPos > -1){
+                selPos = gtPos;
                 selOperator = Operators.GT;
 
-            } else if (operatorList.get(0).equals("<")){
+            } else if (ltPos > -1){
+                selPos = ltPos;
                 selOperator = Operators.LT;
 
-            } else if (operatorList.get(0).equals(">=")){
+            } else if (gePos > -1){
+                selPos = gePos;
                 selOperator = Operators.GE;
 
-            } else if (operatorList.get(0).equals("<=")){
+            } else if (lePos > -1){
+                selPos = lePos;
                 selOperator = Operators.LE;
 
-            } else if (operatorList.get(0).equals("==")){
+            } else if (eqPos > -1){
+                selPos = eqPos;
                 selOperator = Operators.ET;
 
-            } else if (operatorList.get(0).equals("!=")){
+            } else if (nePos > -1){
+                selPos = nePos;
                 selOperator = Operators.NET;
                 
-            } else if (operatorList.get(0).equals("&&")){
+            } else if (adPos > -1){
+                selPos = adPos;
                 selOperator = Operators.AND;
 
-            } else if (operatorList.get(0).equals("^")){
+            } else if (btPos > -1){
+                selPos = btPos;
                 selOperator = Operators.BIT;
 
-            } else if (operatorList.get(0).equals("||")){
+            } else if (orPos > -1){
+                selPos = orPos;
                 selOperator = Operators.OR;
+                
+            } else if (aaPos > -1){
+                selPos = aaPos;
+                selOperator = Operators.PPLUS;
+                removeSecondTerm = false;
+
+            } else if (mmPos > -1){
+                selPos = mmPos;
+                selOperator = Operators.MMINUS;
+                removeSecondTerm = false;
                 
             } else if (operatorList.get(0).equals("=")){
                 selOperator = Operators.ASSIGN;
@@ -921,36 +966,38 @@ public class Calc extends javax.swing.JFrame {
 
             } else if (operatorList.get(0).equals("%=")){
                 selOperator = Operators.AMOD;
+
             } else {
                 throw  new InvalidEquationException();
             }
             
             
-            if(selOperator.ordinal() > 5)
+            if(selOperator.ordinal() > 13 && selPos == -1)
                 selPos = 0;
-  
+            
             System.out.println(numbersList);
             System.out.println(operatorList);
             try {
-                numbersList.set(selPos, calculateEquation(numbersList.get(selPos), numbersList.get(selPos+1), selOperator));
+                numbersList.set(selPos, calculateEquation(numbersList, selPos, selOperator));
             } catch (NoSuchVariableException | ArithmeticException | LogicalFormatException | InequalityFormatException | InvalidNameException e) {
                 showErrorDialog(e.getMessage());
 
                 return "";
             }
             
-            if(selOperator.ordinal() > 13)
-                break;
+//            if(selOperator.ordinal() > 13)
+//                break;
             
             operatorList.remove(selPos);
-            numbersList.remove(selPos+1);
-        }
+            if(removeSecondTerm)
+                numbersList.remove(selPos+1);
+        }while(numbersList.size() > 1);
 //       
 
         return handleVariables(numbersList.get(0));
     }
     
-    private boolean isBalanced(String str){
+    private boolean isBalanced(String str) throws InvalidEquationException{
         int i = 0;
         for(char s: str.toCharArray()){
             if(s == '(')
@@ -958,6 +1005,8 @@ public class Calc extends javax.swing.JFrame {
             else if(s == ')')
                 i--;
         }
+        if(i < 0)
+            throw new InvalidEquationException();
         return i == 0;
     }
     
@@ -976,19 +1025,17 @@ public class Calc extends javax.swing.JFrame {
         OR,     // || Logical OR
         AND,    // && Logical AND
         BIT,    // ^ Logical Bitwise
+                // !( Not operator is handle on handle parenthesis
         ASSIGN, // = Assignment
         AADD,   // += Assign Add
         ASUB,   // += Assign Subtract
         AMUL,   // *= Assign Multiply
         ADIV,   // /= Assign Divided
-        AMOD    // %= Assign Modulus
+        AMOD,   // %= Assign Modulus
+        PPLUS,  // ++ add one to variable
+        MMINUS, // -- minus one to variable
     };
     
-//    private String handlePercent(String e){
-//        if(e.endsWith("%"))
-//            return String.valueOf(Double.parseDouble(e.substring(0, e.length()-1))/100);
-//        return e;
-//    }
     
     class NoSuchVariableException extends Exception{
 
@@ -1002,6 +1049,10 @@ public class Calc extends javax.swing.JFrame {
 
         public ArithmeticException() {
             super("Atemptted to do arithmetic operation on a non double");
+        }
+        
+        public ArithmeticException(String e) {
+            super(e);
         }
 
     }
@@ -1039,43 +1090,52 @@ public class Calc extends javax.swing.JFrame {
     }
     
     
-    private String calculateEquation(String num1, String num2, Operators a) 
+    private String calculateEquation(List<String> numbersList, int selPos, Operators a) 
             throws NoSuchVariableException, ArithmeticException, LogicalFormatException, InequalityFormatException, InvalidNameException{
         
-        // If the first number is a variable; convert to its value; else return the usual value
-        // If the usual value is a non Digit after the conversion; the variable does not exists
-        //
-        
-        if(a.ordinal() == 14){
-            if(!num1.matches("^(?!(true|false))(?![^a-zA-Z_])\\w+$"))
-                throw new InvalidNameException();
-        }
-        
-        if(a.ordinal() < 14){
-            num1 = handleVariables(num1);
-            
-            if(num1.matches("^(?!(true|false))\\D+$"))
-                throw new NoSuchVariableException();
-        }
-        
-                if(a.ordinal() < 5 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
-            throw new ArithmeticException();
-            
-        if(a.ordinal() > 4 && a.ordinal() < 9 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
-            throw new InequalityFormatException();
-        
-        if(a.ordinal() > 10 && a.ordinal() < 14 && (!num1.matches("^(true|false)$") || !num2.matches("^(true|false)$")))
-            throw new LogicalFormatException();
+        String num1 = numbersList.get(selPos);
+        String num2 = "";
+
+        if(!a.toString().matches("PPLUS|MMINUS"))
+            num2 = numbersList.get(selPos+1);
         
         // If the second number is a variable; convert to its value; else return the usual value
         // If the usual value is a non Digit after the conversion; the variable does not exists
         num2 = handleVariables(num2);
-        if(num2.matches("^(?!(true|false))\\D+$"))
+        if(num2.matches("^(?!^(true|false)$)\\D+$"))
             throw new NoSuchVariableException();
+        //on assignment operator (=)
+        if(a.ordinal() == 14){
+            if(!num1.matches("^(?!^(true|false)$)(?!^[^a-zA-Z_])\\w+$"))
+                throw new InvalidNameException();
+        }
+        
+        //before assignment operator (=)
+        if(a.ordinal() < 14){
+            num1 = handleVariables(num1);
+            
+            if(num1.matches("^(?!^(true|false)$)\\D+$"))
+                throw new NoSuchVariableException();
+        }
+        
+        // On arithimetic operators (+, -, *, /, %)
+        if(a.ordinal() < 5 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
+            throw new ArithmeticException();
+        
+        // On relational operators (>, <, >=, <=, ==, !=)
+        if(a.ordinal() > 4 && a.ordinal() < 9 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
+            throw new InequalityFormatException();
+        
+        // On logical operators (||, &&, ^)
+        if(a.ordinal() > 10 && a.ordinal() < 14 && (!num1.matches("^(true|false)$") || !num2.matches("^(true|false)$")))
+            throw new LogicalFormatException();
+        
+
         
 
         Double varNum = null;
         
+        // after assignment operator (=)
         if(a.ordinal() > 14){
             try {
                 varNum = Double.valueOf(variables.get(num1));
@@ -1090,12 +1150,14 @@ public class Calc extends javax.swing.JFrame {
             case MUL:
                 return String.valueOf(Double.valueOf(num1) * Double.valueOf(num2));
             case DIV:
+                if(num2.equals("0")) throw new ArithmeticException("Attempted to divide by zero");
                 return String.valueOf(Double.valueOf(num1) / Double.valueOf(num2));
             case ADD:
                 return String.valueOf(Double.valueOf(num1) + Double.valueOf(num2));
             case SUB:
                 return String.valueOf(Double.valueOf(num1) - Double.valueOf(num2));
             case MOD:
+                if(num2.equals("0")) throw new ArithmeticException("Attempted to divide by zero");
                 return String.valueOf(Double.valueOf(num1) % Double.valueOf(num2));
             case LT:
                 return String.valueOf(Double.valueOf(num1) < Double.valueOf(num2));
@@ -1133,6 +1195,10 @@ public class Calc extends javax.swing.JFrame {
             case AMOD:
                 variables.put(num1, format.format(varNum % Double.valueOf(num2)));
                 break;
+            case PPLUS:
+                return format.format(varNum + 1);
+            case MMINUS:
+                return format.format(varNum - 1);
             default:
                 throw new AssertionError();
         }
