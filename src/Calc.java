@@ -741,14 +741,15 @@ public class Calc extends javax.swing.JFrame {
         if(evt.getSource() instanceof javax.swing.JButton){
             String finalEquation = result.getText();
             String answer = "";
-
+            
+            if(finalEquation.isEmpty()){
+                return;
+            }
             System.out.println(finalEquation);
 
             try{
                 finalEquation = cleanEquation(finalEquation);
-                if(finalEquation.isEmpty()){
-                    return;
-                }
+                
                 answer = evalEquation(finalEquation);
                 result.setText(format.format(Double.valueOf(answer)));
             } catch(NumberFormatException e) { // if the result is true or false
@@ -834,6 +835,8 @@ public class Calc extends javax.swing.JFrame {
         
         String varValue = variables.get(var.substring(startPos));
         try {
+            if(varValue != null && varValue.matches("^(true|false)$") && negate == 1)
+                return varValue;
             if(varValue != null)
                 return String.valueOf(Double.parseDouble(varValue) * negate);
         } catch (NumberFormatException ex){
@@ -1102,7 +1105,7 @@ public class Calc extends javax.swing.JFrame {
         // If the second number is a variable; convert to its value; else return the usual value
         // If the usual value is a non Digit after the conversion; the variable does not exists
         num2 = handleVariables(num2);
-        if(num2.matches("^(?!^(true|false)$)\\D+$"))
+        if(num2.matches("^(?!^(true|false)$)(?!^[^a-zA-Z_])\\w+$"))
             throw new NoSuchVariableException();
         //on assignment operator (=)
         if(a.ordinal() == 14){
