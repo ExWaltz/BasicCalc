@@ -29,46 +29,46 @@ public class Calc extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonPanel = new javax.swing.JPanel();
-        percent = new javax.swing.JButton();
-        plus = new javax.swing.JButton();
-        equalsComparison = new javax.swing.JButton();
-        closeParentesis = new javax.swing.JButton();
-        two = new javax.swing.JButton();
-        one = new javax.swing.JButton();
-        equals = new javax.swing.JButton();
-        multiply = new javax.swing.JButton();
-        four = new javax.swing.JButton();
-        greaterEquals = new javax.swing.JButton();
-        or = new javax.swing.JButton();
-        greaterThan = new javax.swing.JButton();
-        seven = new javax.swing.JButton();
-        and = new javax.swing.JButton();
-        decimal = new javax.swing.JButton();
-        notEquals = new javax.swing.JButton();
-        delete = new javax.swing.JButton();
-        three = new javax.swing.JButton();
-        minus = new javax.swing.JButton();
-        openParentesis = new javax.swing.JButton();
-        negation = new javax.swing.JButton();
         clearAll = new javax.swing.JButton();
-        lessThan = new javax.swing.JButton();
-        zero = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
         not = new javax.swing.JButton();
-        divide = new javax.swing.JButton();
         bitwise = new javax.swing.JButton();
-        five = new javax.swing.JButton();
-        lessEquals = new javax.swing.JButton();
-        nine = new javax.swing.JButton();
-        six = new javax.swing.JButton();
-        eight = new javax.swing.JButton();
-        assignDiv = new javax.swing.JButton();
-        assignment = new javax.swing.JButton();
-        assignAdd = new javax.swing.JButton();
-        assignMul = new javax.swing.JButton();
-        assignMin = new javax.swing.JButton();
-        assignMod = new javax.swing.JButton();
-        addAdd = new javax.swing.JButton();
+        openParentesis = new javax.swing.JButton();
+        closeParentesis = new javax.swing.JButton();
+        percent = new javax.swing.JButton();
+        divide = new javax.swing.JButton();
         minMin = new javax.swing.JButton();
+        assignMul = new javax.swing.JButton();
+        and = new javax.swing.JButton();
+        or = new javax.swing.JButton();
+        seven = new javax.swing.JButton();
+        eight = new javax.swing.JButton();
+        nine = new javax.swing.JButton();
+        multiply = new javax.swing.JButton();
+        addAdd = new javax.swing.JButton();
+        assignMin = new javax.swing.JButton();
+        equalsComparison = new javax.swing.JButton();
+        notEquals = new javax.swing.JButton();
+        four = new javax.swing.JButton();
+        five = new javax.swing.JButton();
+        six = new javax.swing.JButton();
+        minus = new javax.swing.JButton();
+        assignDiv = new javax.swing.JButton();
+        assignAdd = new javax.swing.JButton();
+        greaterEquals = new javax.swing.JButton();
+        greaterThan = new javax.swing.JButton();
+        one = new javax.swing.JButton();
+        two = new javax.swing.JButton();
+        three = new javax.swing.JButton();
+        plus = new javax.swing.JButton();
+        assignMod = new javax.swing.JButton();
+        assignment = new javax.swing.JButton();
+        lessEquals = new javax.swing.JButton();
+        lessThan = new javax.swing.JButton();
+        decimal = new javax.swing.JButton();
+        zero = new javax.swing.JButton();
+        negation = new javax.swing.JButton();
+        equals = new javax.swing.JButton();
         resultPanel = new javax.swing.JPanel();
         result = new javax.swing.JTextField();
 
@@ -79,237 +79,7 @@ public class Calc extends javax.swing.JFrame {
 
         buttonPanel.setBackground(getBackground());
         buttonPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-
-        percent.setBackground(operatorColor);
-        percent.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        percent.setForeground(textColor);
-        percent.setText("%");
-        percent.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        percent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        plus.setBackground(operatorColor);
-        plus.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        plus.setForeground(textColor);
-        plus.setText("+");
-        plus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        plus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        equalsComparison.setBackground(operatorColor);
-        equalsComparison.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        equalsComparison.setForeground(textColor);
-        equalsComparison.setText("==");
-        equalsComparison.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        equalsComparison.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        closeParentesis.setBackground(operatorColor);
-        closeParentesis.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        closeParentesis.setForeground(textColor);
-        closeParentesis.setText(")");
-        closeParentesis.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        closeParentesis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        two.setBackground(numColor);
-        two.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        two.setForeground(textColor);
-        two.setText("2");
-        two.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        two.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        one.setBackground(numColor);
-        one.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        one.setForeground(textColor);
-        one.setText("1");
-        one.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        one.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        equals.setBackground(equalColor);
-        equals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        equals.setForeground(textColor);
-        equals.setText("=");
-        equals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        equals.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                equalsActionPerformed(evt);
-            }
-        });
-
-        multiply.setBackground(operatorColor);
-        multiply.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        multiply.setForeground(textColor);
-        multiply.setText("*");
-        multiply.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        multiply.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        four.setBackground(numColor);
-        four.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        four.setForeground(textColor);
-        four.setText("4");
-        four.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        four.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        greaterEquals.setBackground(operatorColor);
-        greaterEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        greaterEquals.setForeground(textColor);
-        greaterEquals.setText(">=");
-        greaterEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        greaterEquals.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        or.setBackground(operatorColor);
-        or.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        or.setForeground(textColor);
-        or.setText("||");
-        or.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        or.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        greaterThan.setBackground(operatorColor);
-        greaterThan.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        greaterThan.setForeground(textColor);
-        greaterThan.setText(">");
-        greaterThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        greaterThan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        seven.setBackground(numColor);
-        seven.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        seven.setForeground(textColor);
-        seven.setText("7");
-        seven.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        seven.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        and.setBackground(operatorColor);
-        and.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        and.setForeground(textColor);
-        and.setText("&&");
-        and.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        and.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        decimal.setBackground(numColor);
-        decimal.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        decimal.setForeground(textColor);
-        decimal.setText(".");
-        decimal.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        decimal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        notEquals.setBackground(operatorColor);
-        notEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        notEquals.setForeground(textColor);
-        notEquals.setText("!=");
-        notEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        notEquals.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        delete.setBackground(clearColor);
-        delete.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        delete.setForeground(textColor);
-        delete.setText("Del");
-        delete.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        delete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteActionPerformed(evt);
-            }
-        });
-
-        three.setBackground(numColor);
-        three.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        three.setForeground(textColor);
-        three.setText("3");
-        three.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        three.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        minus.setBackground(operatorColor);
-        minus.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        minus.setForeground(textColor);
-        minus.setText("-");
-        minus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        minus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        openParentesis.setBackground(operatorColor);
-        openParentesis.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        openParentesis.setForeground(textColor);
-        openParentesis.setText("(");
-        openParentesis.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        openParentesis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        negation.setBackground(numColor);
-        negation.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        negation.setForeground(textColor);
-        negation.setText("(-)");
-        negation.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        negation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                negationAction(evt);
-            }
-        });
+        buttonPanel.setLayout(new java.awt.GridLayout(5, 8));
 
         clearAll.setBackground(clearColor);
         clearAll.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
@@ -321,28 +91,19 @@ public class Calc extends javax.swing.JFrame {
                 clearAllActionPerformed(evt);
             }
         });
+        buttonPanel.add(clearAll);
 
-        lessThan.setBackground(operatorColor);
-        lessThan.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        lessThan.setForeground(textColor);
-        lessThan.setText("<");
-        lessThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        lessThan.addActionListener(new java.awt.event.ActionListener() {
+        delete.setBackground(clearColor);
+        delete.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        delete.setForeground(textColor);
+        delete.setText("Del");
+        delete.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
+                deleteActionPerformed(evt);
             }
         });
-
-        zero.setBackground(numColor);
-        zero.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        zero.setForeground(textColor);
-        zero.setText("0");
-        zero.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        zero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
+        buttonPanel.add(delete);
 
         not.setBackground(operatorColor);
         not.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
@@ -354,17 +115,7 @@ public class Calc extends javax.swing.JFrame {
                 buttonAction(evt);
             }
         });
-
-        divide.setBackground(operatorColor);
-        divide.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        divide.setForeground(textColor);
-        divide.setText("/");
-        divide.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        divide.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
+        buttonPanel.add(not);
 
         bitwise.setBackground(operatorColor);
         bitwise.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
@@ -376,138 +127,55 @@ public class Calc extends javax.swing.JFrame {
                 buttonAction(evt);
             }
         });
+        buttonPanel.add(bitwise);
 
-        five.setBackground(numColor);
-        five.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        five.setForeground(textColor);
-        five.setText("5");
-        five.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        five.addActionListener(new java.awt.event.ActionListener() {
+        openParentesis.setBackground(operatorColor);
+        openParentesis.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        openParentesis.setForeground(textColor);
+        openParentesis.setText("(");
+        openParentesis.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        openParentesis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonAction(evt);
             }
         });
+        buttonPanel.add(openParentesis);
 
-        lessEquals.setBackground(operatorColor);
-        lessEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        lessEquals.setForeground(textColor);
-        lessEquals.setText("<=");
-        lessEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        lessEquals.addActionListener(new java.awt.event.ActionListener() {
+        closeParentesis.setBackground(operatorColor);
+        closeParentesis.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        closeParentesis.setForeground(textColor);
+        closeParentesis.setText(")");
+        closeParentesis.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        closeParentesis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonAction(evt);
             }
         });
+        buttonPanel.add(closeParentesis);
 
-        nine.setBackground(numColor);
-        nine.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        nine.setForeground(textColor);
-        nine.setText("9");
-        nine.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        nine.addActionListener(new java.awt.event.ActionListener() {
+        percent.setBackground(operatorColor);
+        percent.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        percent.setForeground(textColor);
+        percent.setText("%");
+        percent.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        percent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonAction(evt);
             }
         });
+        buttonPanel.add(percent);
 
-        six.setBackground(numColor);
-        six.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        six.setForeground(textColor);
-        six.setText("6");
-        six.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        six.addActionListener(new java.awt.event.ActionListener() {
+        divide.setBackground(operatorColor);
+        divide.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        divide.setForeground(textColor);
+        divide.setText("/");
+        divide.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        divide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonAction(evt);
             }
         });
-
-        eight.setBackground(numColor);
-        eight.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        eight.setForeground(textColor);
-        eight.setText("8");
-        eight.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        eight.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        assignDiv.setBackground(operatorColor);
-        assignDiv.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        assignDiv.setForeground(textColor);
-        assignDiv.setText("/=");
-        assignDiv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        assignDiv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        assignment.setBackground(operatorColor);
-        assignment.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        assignment.setForeground(textColor);
-        assignment.setText("=");
-        assignment.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        assignment.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        assignAdd.setBackground(operatorColor);
-        assignAdd.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        assignAdd.setForeground(textColor);
-        assignAdd.setText("+=");
-        assignAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        assignAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        assignMul.setBackground(operatorColor);
-        assignMul.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        assignMul.setForeground(textColor);
-        assignMul.setText("*=");
-        assignMul.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        assignMul.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        assignMin.setBackground(operatorColor);
-        assignMin.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        assignMin.setForeground(textColor);
-        assignMin.setText("-=");
-        assignMin.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        assignMin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        assignMod.setBackground(operatorColor);
-        assignMod.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        assignMod.setForeground(textColor);
-        assignMod.setText("%=");
-        assignMod.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        assignMod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
-
-        addAdd.setBackground(operatorColor);
-        addAdd.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        addAdd.setForeground(textColor);
-        addAdd.setText("++");
-        addAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        addAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction(evt);
-            }
-        });
+        buttonPanel.add(divide);
 
         minMin.setBackground(operatorColor);
         minMin.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
@@ -519,149 +187,379 @@ public class Calc extends javax.swing.JFrame {
                 buttonAction(evt);
             }
         });
+        buttonPanel.add(minMin);
 
-        javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
-        buttonPanel.setLayout(buttonPanelLayout);
-        buttonPanelLayout.setHorizontalGroup(
-            buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(buttonPanelLayout.createSequentialGroup()
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(assignDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(addAdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(assignMod, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(clearAll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(minMin, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignMul, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignment, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignMin, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addComponent(greaterEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(greaterThan, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(one, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addComponent(lessEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(lessThan, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(decimal, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(negation, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addComponent(equalsComparison, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(notEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(four, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(buttonPanelLayout.createSequentialGroup()
-                                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(not, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(and, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, 0)
-                                .addComponent(or, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, 0)
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(multiply, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(plus, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                        .addComponent(bitwise, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(openParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(closeParentesis, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
-                        .addGap(0, 0, 0)
-                        .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(divide, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, 0))
-        );
+        assignMul.setBackground(operatorColor);
+        assignMul.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignMul.setForeground(textColor);
+        assignMul.setText("*=");
+        assignMul.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignMul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(assignMul);
 
-        buttonPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addAdd, and, assignAdd, assignDiv, assignMin, assignMod, assignMul, assignment, bitwise, closeParentesis, decimal, divide, eight, equals, equalsComparison, five, four, greaterEquals, greaterThan, lessEquals, lessThan, minMin, minus, multiply, negation, nine, not, notEquals, one, openParentesis, or, percent, plus, seven, six, three, two, zero});
+        and.setBackground(operatorColor);
+        and.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        and.setForeground(textColor);
+        and.setText("&&");
+        and.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        and.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(and);
 
-        buttonPanelLayout.setVerticalGroup(
-            buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(buttonPanelLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(divide, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(closeParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(openParentesis, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bitwise, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(not, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clearAll, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(multiply, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(or, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(and, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignMul, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(minMin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(four, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(notEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(equalsComparison, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignMin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(plus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(one, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(greaterThan, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(greaterEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(negation, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(decimal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lessThan, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lessEquals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignment, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assignMod, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0))
-        );
+        or.setBackground(operatorColor);
+        or.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        or.setForeground(textColor);
+        or.setText("||");
+        or.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        or.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(or);
 
-        buttonPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addAdd, and, assignAdd, assignDiv, assignMin, assignMod, assignMul, assignment, bitwise, clearAll, closeParentesis, decimal, delete, divide, eight, equals, equalsComparison, five, four, greaterEquals, greaterThan, lessEquals, lessThan, minMin, minus, multiply, negation, nine, not, notEquals, one, openParentesis, or, percent, plus, seven, six, three, two, zero});
+        seven.setBackground(numColor);
+        seven.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        seven.setForeground(textColor);
+        seven.setText("7");
+        seven.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        seven.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(seven);
+
+        eight.setBackground(numColor);
+        eight.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        eight.setForeground(textColor);
+        eight.setText("8");
+        eight.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        eight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(eight);
+
+        nine.setBackground(numColor);
+        nine.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        nine.setForeground(textColor);
+        nine.setText("9");
+        nine.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        nine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(nine);
+
+        multiply.setBackground(operatorColor);
+        multiply.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        multiply.setForeground(textColor);
+        multiply.setText("*");
+        multiply.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        multiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(multiply);
+
+        addAdd.setBackground(operatorColor);
+        addAdd.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        addAdd.setForeground(textColor);
+        addAdd.setText("++");
+        addAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        addAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(addAdd);
+
+        assignMin.setBackground(operatorColor);
+        assignMin.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignMin.setForeground(textColor);
+        assignMin.setText("-=");
+        assignMin.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignMin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(assignMin);
+
+        equalsComparison.setBackground(operatorColor);
+        equalsComparison.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        equalsComparison.setForeground(textColor);
+        equalsComparison.setText("==");
+        equalsComparison.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        equalsComparison.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(equalsComparison);
+
+        notEquals.setBackground(operatorColor);
+        notEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        notEquals.setForeground(textColor);
+        notEquals.setText("!=");
+        notEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        notEquals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(notEquals);
+
+        four.setBackground(numColor);
+        four.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        four.setForeground(textColor);
+        four.setText("4");
+        four.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        four.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(four);
+
+        five.setBackground(numColor);
+        five.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        five.setForeground(textColor);
+        five.setText("5");
+        five.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        five.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(five);
+
+        six.setBackground(numColor);
+        six.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        six.setForeground(textColor);
+        six.setText("6");
+        six.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        six.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(six);
+
+        minus.setBackground(operatorColor);
+        minus.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        minus.setForeground(textColor);
+        minus.setText("-");
+        minus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        minus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(minus);
+
+        assignDiv.setBackground(operatorColor);
+        assignDiv.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignDiv.setForeground(textColor);
+        assignDiv.setText("/=");
+        assignDiv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignDiv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(assignDiv);
+
+        assignAdd.setBackground(operatorColor);
+        assignAdd.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignAdd.setForeground(textColor);
+        assignAdd.setText("+=");
+        assignAdd.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(assignAdd);
+
+        greaterEquals.setBackground(operatorColor);
+        greaterEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        greaterEquals.setForeground(textColor);
+        greaterEquals.setText(">=");
+        greaterEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        greaterEquals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(greaterEquals);
+
+        greaterThan.setBackground(operatorColor);
+        greaterThan.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        greaterThan.setForeground(textColor);
+        greaterThan.setText(">");
+        greaterThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        greaterThan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(greaterThan);
+
+        one.setBackground(numColor);
+        one.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        one.setForeground(textColor);
+        one.setText("1");
+        one.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        one.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(one);
+
+        two.setBackground(numColor);
+        two.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        two.setForeground(textColor);
+        two.setText("2");
+        two.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        two.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(two);
+
+        three.setBackground(numColor);
+        three.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        three.setForeground(textColor);
+        three.setText("3");
+        three.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        three.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(three);
+
+        plus.setBackground(operatorColor);
+        plus.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        plus.setForeground(textColor);
+        plus.setText("+");
+        plus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        plus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(plus);
+
+        assignMod.setBackground(operatorColor);
+        assignMod.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignMod.setForeground(textColor);
+        assignMod.setText("%=");
+        assignMod.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignMod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(assignMod);
+
+        assignment.setBackground(operatorColor);
+        assignment.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        assignment.setForeground(textColor);
+        assignment.setText("=");
+        assignment.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        assignment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(assignment);
+
+        lessEquals.setBackground(operatorColor);
+        lessEquals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        lessEquals.setForeground(textColor);
+        lessEquals.setText("<=");
+        lessEquals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        lessEquals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(lessEquals);
+
+        lessThan.setBackground(operatorColor);
+        lessThan.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        lessThan.setForeground(textColor);
+        lessThan.setText("<");
+        lessThan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        lessThan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(lessThan);
+
+        decimal.setBackground(numColor);
+        decimal.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        decimal.setForeground(textColor);
+        decimal.setText(".");
+        decimal.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        decimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(decimal);
+
+        zero.setBackground(numColor);
+        zero.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        zero.setForeground(textColor);
+        zero.setText("0");
+        zero.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        zero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction(evt);
+            }
+        });
+        buttonPanel.add(zero);
+
+        negation.setBackground(numColor);
+        negation.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        negation.setForeground(textColor);
+        negation.setText("(-)");
+        negation.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        negation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                negationAction(evt);
+            }
+        });
+        buttonPanel.add(negation);
+
+        equals.setBackground(equalColor);
+        equals.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        equals.setForeground(textColor);
+        equals.setText("=");
+        equals.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        equals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equalsActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(equals);
 
         getContentPane().add(buttonPanel, java.awt.BorderLayout.CENTER);
 
@@ -679,7 +577,7 @@ public class Calc extends javax.swing.JFrame {
         resultPanel.setLayout(resultPanelLayout);
         resultPanelLayout.setHorizontalGroup(
             resultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(result, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(result, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
         );
         resultPanelLayout.setVerticalGroup(
             resultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
