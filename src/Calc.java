@@ -28,6 +28,11 @@ public class Calc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        calcPanel = new javax.swing.JPanel();
+        resultPanel = new javax.swing.JPanel();
+        result = new javax.swing.JTextField();
+        historyButton = new javax.swing.JButton();
+        lastEquation = new javax.swing.JLabel();
         buttonPanel = new javax.swing.JPanel();
         clearAll = new javax.swing.JButton();
         delete = new javax.swing.JButton();
@@ -69,17 +74,79 @@ public class Calc extends javax.swing.JFrame {
         zero = new javax.swing.JButton();
         negation = new javax.swing.JButton();
         equals = new javax.swing.JButton();
-        resultPanel = new javax.swing.JPanel();
-        result = new javax.swing.JTextField();
+        historyPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        historyList = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator By Group 1");
         setBackground(backgroundColor);
-        setResizable(false);
+        setMinimumSize(new java.awt.Dimension(400, 330));
+        setPreferredSize(new java.awt.Dimension(500, 630));
+        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
+
+        calcPanel.setBackground(backgroundColor);
+        calcPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        calcPanel.setLayout(new java.awt.GridLayout(2, 1));
+
+        resultPanel.setBackground(getBackground());
+        resultPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+
+        result.setBackground(backgroundColor);
+        result.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        result.setForeground(textColor);
+        result.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        result.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        result.setCaretColor(new java.awt.Color(0, 255, 153));
+        result.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        result.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                resultKeyPressed(evt);
+            }
+        });
+
+        historyButton.setBackground(backgroundColor);
+        historyButton.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        historyButton.setForeground(textColor);
+        historyButton.setText("History");
+        historyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                historyAction(evt);
+            }
+        });
+
+        lastEquation.setFont(new java.awt.Font("Montserrat", 0, 14)); // NOI18N
+        lastEquation.setForeground(new java.awt.Color(204, 204, 204));
+        lastEquation.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lastEquation.setText(" ");
+
+        javax.swing.GroupLayout resultPanelLayout = new javax.swing.GroupLayout(resultPanel);
+        resultPanel.setLayout(resultPanelLayout);
+        resultPanelLayout.setHorizontalGroup(
+            resultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(result)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, resultPanelLayout.createSequentialGroup()
+                .addContainerGap(385, Short.MAX_VALUE)
+                .addComponent(historyButton)
+                .addContainerGap())
+            .addComponent(lastEquation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        resultPanelLayout.setVerticalGroup(
+            resultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, resultPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(historyButton)
+                .addGap(0, 67, Short.MAX_VALUE)
+                .addComponent(lastEquation)
+                .addGap(0, 0, 0)
+                .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        calcPanel.add(resultPanel);
 
         buttonPanel.setBackground(getBackground());
         buttonPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        buttonPanel.setLayout(new java.awt.GridLayout(5, 8));
+        buttonPanel.setLayout(new java.awt.GridLayout(5, 8, 1, 1));
 
         clearAll.setBackground(clearColor);
         clearAll.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
@@ -101,6 +168,11 @@ public class Calc extends javax.swing.JFrame {
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
+            }
+        });
+        delete.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                resultKeyPressed(evt);
             }
         });
         buttonPanel.add(delete);
@@ -561,54 +633,63 @@ public class Calc extends javax.swing.JFrame {
         });
         buttonPanel.add(equals);
 
-        getContentPane().add(buttonPanel, java.awt.BorderLayout.CENTER);
+        calcPanel.add(buttonPanel);
 
-        resultPanel.setBackground(getBackground());
+        getContentPane().add(calcPanel);
 
-        result.setBackground(backgroundColor);
-        result.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        result.setForeground(textColor);
-        result.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        result.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        result.setCaretColor(new java.awt.Color(0, 255, 153));
-        result.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        historyPanel.setBackground(backgroundColor);
 
-        javax.swing.GroupLayout resultPanelLayout = new javax.swing.GroupLayout(resultPanel);
-        resultPanel.setLayout(resultPanelLayout);
-        resultPanelLayout.setHorizontalGroup(
-            resultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(result, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
+        jScrollPane1.setBackground(backgroundColor);
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jScrollPane1.setForeground(textColor);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        historyList.setEditable(false);
+        historyList.setBackground(backgroundColor);
+        historyList.setColumns(20);
+        historyList.setFont(new java.awt.Font("Montserrat", 0, 14)); // NOI18N
+        historyList.setForeground(textColor);
+        historyList.setRows(5);
+        historyList.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        historyList.setDisabledTextColor(backgroundColor);
+        jScrollPane1.setViewportView(historyList);
+
+        javax.swing.GroupLayout historyPanelLayout = new javax.swing.GroupLayout(historyPanel);
+        historyPanel.setLayout(historyPanelLayout);
+        historyPanelLayout.setHorizontalGroup(
+            historyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
         );
-        resultPanelLayout.setVerticalGroup(
-            resultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(resultPanelLayout.createSequentialGroup()
+        historyPanelLayout.setVerticalGroup(
+            historyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(historyPanelLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
-        getContentPane().add(resultPanel, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(historyPanel);
+        historyPanel.setVisible(false);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void clearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllActionPerformed
-        // TODO add your handling code here:
         result.setText("");
     }//GEN-LAST:event_clearAllActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-        // TODO add your handling code here:
         int endModifier = 1;
-        if(result.getText().equals(""))
+        if (result.getText().equals(""))
             return;
-        if(result.getText().matches(".*([\\+\\-\\*\\/\\<\\>\\=\\!]=|\\+\\+|\\-\\-|\\|\\||\\&\\&|\\!\\()$"))
+        if (result.getText().matches(".*([\\+\\-\\*\\/\\<\\>\\=\\!]=|\\+\\+|\\-\\-|\\|\\||\\&\\&|\\!\\()$"))
             endModifier = 2;
         
-        if(result.getText().matches(".*true$"))
+        if (result.getText().matches(".*true$"))
             endModifier = 4;
         
-        if(result.getText().matches(".*false"))
+        if (result.getText().matches(".*false"))
             endModifier = 5;
         
 
@@ -627,46 +708,53 @@ public class Calc extends javax.swing.JFrame {
         while(!isBalanced(finalEquation)){
             finalEquation += ")";
         }
-
-        if(finalEquation.matches(".*\\(.+")){
-            finalEquation = handleParenthesis(finalEquation);
-        }
+        
         return finalEquation;
     }
     
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
-        // TODO add your handling code here:
-        if(evt.getSource() instanceof javax.swing.JButton){
-            String finalEquation = result.getText();
-            String answer = "";
-            
-            if(finalEquation.isEmpty()){
-                return;
-            }
-            System.out.println(finalEquation);
+        String finalEquation = result.getText();
+        String answer = "";
 
-            try{
-                finalEquation = cleanEquation(finalEquation);
-                
-                answer = evalEquation(finalEquation);
-                result.setText(format.format(Double.valueOf(answer)));
-            } catch(NumberFormatException e) { // if the result is true or false
-                result.setText(answer);
-            } catch (InvalidEquationException | ArithmeticException | LogicalFormatException| NoSuchVariableException e){
-                showErrorDialog(e.getMessage());
-                result.setText("");
-            }
+        if (finalEquation.isEmpty()){
+            return;
+        }
+        System.out.println(finalEquation);
+
+        try{   
+            finalEquation = cleanEquation(finalEquation);
+
+            lastEquation.setText(finalEquation);
+
+            finalEquation = handleParenthesis(finalEquation);
+
+            answer = evalEquation(finalEquation);
+
+            result.setText(format.format(Double.valueOf(answer)));
+            historyList.setText(lastEquation.getText() + " = " + format.format(Double.valueOf(answer)) + "\n" + historyList.getText());
+        } catch(NumberFormatException e) { // if the result is true or false
+            result.setText(answer);
+            
+            // If it is an assignment operator then dont add an answer
+            if (answer.isEmpty())
+                historyList.setText(lastEquation.getText() + "\n" + historyList.getText());
+            else
+                historyList.setText(lastEquation.getText() + " = " + answer + "\n" + historyList.getText());
+
+        } catch (InvalidEquationException | ArithmeticException | LogicalFormatException | NoSuchVariableException | InequalityFormatException | InvalidNameException e){
+            showErrorDialog(e.getMessage());
+            result.setText("");
+            lastEquation.setText(" ");
         }
     }//GEN-LAST:event_equalsActionPerformed
 
     private void buttonAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction
-        // TODO add your handling code here:
-        if(!(evt.getSource() instanceof javax.swing.JButton))
+        if (!(evt.getSource() instanceof javax.swing.JButton))
             return;
         
         javax.swing.JButton button = (javax.swing.JButton) evt.getSource();
         
-        if(button.getText().matches("\\d") && result.getText().matches("(true|false)"))
+        if (button.getText().matches("\\d") && result.getText().matches("(true|false)"))
             result.setText("");
         
         result.setText(result.getText() + button.getText());
@@ -680,45 +768,56 @@ public class Calc extends javax.swing.JFrame {
             return;
         String lastNum = numbers[numbers.length - 1];
         String newEquation = result.getText().replaceAll("(?<![\\w\\)\\ ])(\\(?\\-)?[\\w\\.]+\\)?(?=\\)*$)(?![\\w\\.]+)", "");
-        if(lastNum.matches("\\(?-[\\w\\.]+\\)?$"))
+        if (lastNum.matches("\\(?-[\\w\\.]+\\)?$"))
             result.setText(newEquation.concat(lastNum.replaceAll("[\\(\\-\\)]", "")));
-        else if(lastNum.matches("[\\w\\.]+$"))
+        else if (lastNum.matches("[\\w\\.]+$"))
             result.setText(newEquation.concat("(-").concat(lastNum).concat(")"));
     }//GEN-LAST:event_negationAction
+
+    private void historyAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historyAction
+        historyPanel.setVisible(!historyPanel.isVisible());
+        historyList.setVisible(true);
+    }//GEN-LAST:event_historyAction
+
+    private void resultKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_resultKeyPressed
+        if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            equalsActionPerformed(null);
+        }
+    }//GEN-LAST:event_resultKeyPressed
 
     private void showErrorDialog(String e){
         JOptionPane.showMessageDialog(this, e, "Error Message", JOptionPane.ERROR_MESSAGE);
     }
-    private String handleParenthesis(String finalEquation) throws LogicalFormatException{
+    private String handleParenthesis(String finalEquation) throws LogicalFormatException, InvalidEquationException, ArithmeticException, NoSuchVariableException, InequalityFormatException, InvalidNameException{ 
         int startPos = -1, endPos = -1;
         for(int i = 0; i<finalEquation.length(); i++){
-            if(startPos != -1 && endPos != -1)
+            if (startPos != -1 && endPos != -1)
                 break;
-            if(String.valueOf(finalEquation.charAt(i)).startsWith("("))
+            if (String.valueOf(finalEquation.charAt(i)).startsWith("("))
                 startPos = i;
             else if (String.valueOf(finalEquation.charAt(i)).endsWith(")"))
                 endPos = i;
         }
         
+        if (!finalEquation.matches(".*\\(.+") || (startPos == -1 && endPos == -1)){
+            return finalEquation;
+        }
+        
         String startParenthesis = "(";
         String focus = finalEquation.substring(startPos+1, endPos);
         String resultEquation;
-        try {
-            resultEquation = evalEquation(focus);
-        } catch (InvalidEquationException | ArithmeticException | NoSuchVariableException e) {
-            showErrorDialog(e.getMessage());
-            return "";            
-        }
         
-        if(startPos > 0 && finalEquation.charAt(startPos-1) == '!'){
-            if(!resultEquation.matches("true|false"))
+        resultEquation = evalEquation(focus);
+        
+        if (startPos > 0 && finalEquation.charAt(startPos-1) == '!'){
+            if (!resultEquation.matches("true|false"))
                 throw new LogicalFormatException();
             startParenthesis = "!" + startParenthesis;
             resultEquation = String.valueOf(!Boolean.valueOf(resultEquation));
         }
         finalEquation = finalEquation.replace(startParenthesis.concat(focus).concat(")"), resultEquation);
         System.out.println(finalEquation);
-        if(finalEquation.matches(".*\\(.*"))
+        if (finalEquation.matches(".*\\(.*"))
             finalEquation = handleParenthesis(finalEquation);
         return  finalEquation;
     }
@@ -726,16 +825,16 @@ public class Calc extends javax.swing.JFrame {
     private String handleVariables(String var) throws ArithmeticException{
         int startPos = 0;
         int negate = 1;
-        if(var.matches("^-.+$")){
+        if (var.matches("^-.+$")){
             startPos = 1;
             negate = -1;
         }
         
         String varValue = variables.get(var.substring(startPos));
         try {
-            if(varValue != null && varValue.matches("^(true|false)$") && negate == 1)
+            if (varValue != null && varValue.matches("^(true|false)$") && negate == 1)
                 return varValue;
-            if(varValue != null)
+            if (varValue != null)
                 return String.valueOf(Double.parseDouble(varValue) * negate);
         } catch (NumberFormatException ex){
             throw new ArithmeticException();
@@ -744,8 +843,7 @@ public class Calc extends javax.swing.JFrame {
     }
    
     
-    private String evalEquation(String finalEquation) throws InvalidEquationException, ArithmeticException, NoSuchVariableException{
-//        List<String> equations = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\d])\\-?[\\d\\.\\w\\s]+")));
+    private String evalEquation(String finalEquation) throws InvalidEquationException, ArithmeticException, NoSuchVariableException, LogicalFormatException, InequalityFormatException, InvalidNameException{
         List<String> operatorList = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\w\\) ])\\-?[\\w.]+")));
         List<String> numbersList = new ArrayList<>(Arrays.asList(finalEquation.split("(?!^-)(?!(?<=[\\W])-)[^\\.\\w\\s]")));
         
@@ -754,13 +852,13 @@ public class Calc extends javax.swing.JFrame {
 
         numbersList.replaceAll(e -> e.replaceAll("\\.0*$", ""));
         
-        if(numbersList.isEmpty())
+        if (numbersList.isEmpty())
             return "";
         
         
         //Handle operations 
         do{
-            if(numbersList.size() == 1 && (operatorList.isEmpty() || !operatorList.get(0).matches("^(\\+\\+|\\-\\-)$")))
+            if (numbersList.size() == 1 && (operatorList.isEmpty() || !operatorList.get(0).matches("^(\\+\\+|\\-\\-)$")))
                 break;
             // TODO: Improve this part. Make a fuction that returms a list of operation order
             int mulPos = operatorList.indexOf("*");
@@ -784,23 +882,23 @@ public class Calc extends javax.swing.JFrame {
             boolean removeSecondTerm = true;
             Operators selOperator = null;
 
-            if(divPos > -1 && (divPos < mulPos || mulPos == -1) && (divPos < modPos || modPos == -1)){
+            if (divPos > -1 && (divPos < mulPos || mulPos == -1) && (divPos < modPos || modPos == -1)){
                 selPos = divPos;
                 selOperator = Operators.DIV;
                 
-            } else if(mulPos > -1 && (mulPos < divPos || divPos == -1) && (mulPos < modPos || modPos == -1)){
+            } else if (mulPos > -1 && (mulPos < divPos || divPos == -1) && (mulPos < modPos || modPos == -1)){
                 selPos = mulPos;
                 selOperator = Operators.MUL;
                 
-            } else if(modPos > -1 && (modPos < divPos || divPos == -1) && (modPos < mulPos || mulPos == -1)){
+            } else if (modPos > -1 && (modPos < divPos || divPos == -1) && (modPos < mulPos || mulPos == -1)){
                 selPos = modPos;
                 selOperator = Operators.MOD;
                 
-            } else if(addPos > -1 && (addPos < subPos || subPos == -1)){
+            } else if (addPos > -1 && (addPos < subPos || subPos == -1)){
                 selPos = addPos;
                 selOperator = Operators.ADD;
                 
-            } else if(subPos > -1 && (subPos < addPos || addPos == -1)){
+            } else if (subPos > -1 && (subPos < addPos || addPos == -1)){
                 selPos = subPos;
                 selOperator = Operators.SUB;
                 
@@ -873,27 +971,17 @@ public class Calc extends javax.swing.JFrame {
             }
             
             
-            if(selOperator.ordinal() > 13 && selPos == -1)
+            if (selOperator.ordinal() > 13 && selPos == -1)
                 selPos = 0;
             
             System.out.println(numbersList);
             System.out.println(operatorList);
-            try {
-                numbersList.set(selPos, calculateEquation(numbersList, selPos, selOperator));
-            } catch (NoSuchVariableException | ArithmeticException | LogicalFormatException | InequalityFormatException | InvalidNameException e) {
-                showErrorDialog(e.getMessage());
-
-                return "";
-            }
-            
-//            if(selOperator.ordinal() > 13)
-//                break;
+            numbersList.set(selPos, calculateEquation(numbersList, selPos, selOperator));
             
             operatorList.remove(selPos);
-            if(removeSecondTerm)
+            if (removeSecondTerm)
                 numbersList.remove(selPos+1);
-        }while(numbersList.size() > 1);
-//       
+        }while(numbersList.size() > 1); 
 
         return handleVariables(numbersList.get(0));
     }
@@ -901,12 +989,12 @@ public class Calc extends javax.swing.JFrame {
     private boolean isBalanced(String str) throws InvalidEquationException{
         int i = 0;
         for(char s: str.toCharArray()){
-            if(s == '(')
+            if (s == '(')
                 i++;
-            else if(s == ')')
+            else if (s == ')')
                 i--;
         }
-        if(i < 0)
+        if (i < 0)
             throw new InvalidEquationException();
         return i == 0;
     }
@@ -997,38 +1085,38 @@ public class Calc extends javax.swing.JFrame {
         String num1 = numbersList.get(selPos);
         String num2 = "";
 
-        if(!a.toString().matches("PPLUS|MMINUS"))
+        if (!a.toString().matches("PPLUS|MMINUS"))
             num2 = numbersList.get(selPos+1);
         
         // If the second number is a variable; convert to its value; else return the usual value
         // If the usual value is a non Digit after the conversion; the variable does not exists
         num2 = handleVariables(num2);
-        if(num2.matches("^(?!^(true|false)$)(?!^[^a-zA-Z_])\\w+$"))
+        if (num2.matches("^(?!^(true|false)$)(?!^[^a-zA-Z_])\\w+$"))
             throw new NoSuchVariableException();
         //on assignment operator (=)
-        if(a.ordinal() == 14){
-            if(!num1.matches("^(?!^(true|false)$)(?!^[^a-zA-Z_])\\w+$"))
+        if (a.ordinal() == 14){
+            if (!num1.matches("^(?!^(true|false)$)(?!^[^a-zA-Z_])\\w+$"))
                 throw new InvalidNameException();
         }
         
         //before assignment operator (=)
-        if(a.ordinal() < 14){
+        if (a.ordinal() < 14){
             num1 = handleVariables(num1);
             
-            if(num1.matches("^(?!^(true|false)$)\\D+$"))
+            if (num1.matches("^(?!^(true|false)$)\\D+$"))
                 throw new NoSuchVariableException();
         }
         
         // On arithimetic operators (+, -, *, /, %)
-        if(a.ordinal() < 5 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
+        if (a.ordinal() < 5 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
             throw new ArithmeticException();
         
         // On relational operators (>, <, >=, <=, ==, !=)
-        if(a.ordinal() > 4 && a.ordinal() < 9 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
+        if (a.ordinal() > 4 && a.ordinal() < 9 && (num1.matches("^(true|false)$") || num2.matches("^(true|false)$")))
             throw new InequalityFormatException();
         
         // On logical operators (||, &&, ^)
-        if(a.ordinal() > 10 && a.ordinal() < 14 && (!num1.matches("^(true|false)$") || !num2.matches("^(true|false)$")))
+        if (a.ordinal() > 10 && a.ordinal() < 14 && (!num1.matches("^(true|false)$") || !num2.matches("^(true|false)$")))
             throw new LogicalFormatException();
         
 
@@ -1037,7 +1125,7 @@ public class Calc extends javax.swing.JFrame {
         Double varNum = null;
         
         // after assignment operator (=)
-        if(a.ordinal() > 14){
+        if (a.ordinal() > 14){
             try {
                 varNum = Double.valueOf(variables.get(num1));
             } catch (NumberFormatException e) {
@@ -1051,14 +1139,14 @@ public class Calc extends javax.swing.JFrame {
             case MUL:
                 return String.valueOf(Double.valueOf(num1) * Double.valueOf(num2));
             case DIV:
-                if(num2.equals("0")) throw new ArithmeticException("Attempted to divide by zero");
+                if (num2.equals("0")) throw new ArithmeticException("Attempted to divide by zero");
                 return String.valueOf(Double.valueOf(num1) / Double.valueOf(num2));
             case ADD:
                 return String.valueOf(Double.valueOf(num1) + Double.valueOf(num2));
             case SUB:
                 return String.valueOf(Double.valueOf(num1) - Double.valueOf(num2));
             case MOD:
-                if(num2.equals("0")) throw new ArithmeticException("Attempted to divide by zero");
+                if (num2.equals("0")) throw new ArithmeticException("Attempted to divide by zero");
                 return String.valueOf(Double.valueOf(num1) % Double.valueOf(num2));
             case LT:
                 return String.valueOf(Double.valueOf(num1) < Double.valueOf(num2));
@@ -1107,40 +1195,19 @@ public class Calc extends javax.swing.JFrame {
         return "";
     }
     
-    
-        
+
+   
     /**
      * @param args the command line arguments
      */
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Calc().setVisible(true);
+                Calc calcc = new Calc();
+                calcc.setVisible(true);
+                calcc.result.requestFocusInWindow();
             }
         });
     }
@@ -1168,6 +1235,7 @@ public class Calc extends javax.swing.JFrame {
     private javax.swing.JButton assignment;
     private javax.swing.JButton bitwise;
     private javax.swing.JPanel buttonPanel;
+    private javax.swing.JPanel calcPanel;
     private javax.swing.JButton clearAll;
     private javax.swing.JButton closeParentesis;
     private javax.swing.JButton decimal;
@@ -1180,6 +1248,11 @@ public class Calc extends javax.swing.JFrame {
     private javax.swing.JButton four;
     private javax.swing.JButton greaterEquals;
     private javax.swing.JButton greaterThan;
+    private javax.swing.JButton historyButton;
+    private javax.swing.JTextArea historyList;
+    private javax.swing.JPanel historyPanel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lastEquation;
     private javax.swing.JButton lessEquals;
     private javax.swing.JButton lessThan;
     private javax.swing.JButton minMin;
