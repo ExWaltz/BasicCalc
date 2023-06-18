@@ -790,15 +790,36 @@ public class Calc extends javax.swing.JFrame {
         historyList.setVisible(true);
     }//GEN-LAST:event_historyAction
 
+    /**
+     * This fucntion will calculate the equation when ENTER is pressed
+     */
     private void resultKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_resultKeyPressed
         if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
             equalsActionPerformed(null);
         }
     }//GEN-LAST:event_resultKeyPressed
 
+    /**
+     * This shows an error message diaglog
+     * 
+     * @param e this is the error message
+     */
     private void showErrorDialog(String e){
         JOptionPane.showMessageDialog(this, e, "Error Message", JOptionPane.ERROR_MESSAGE);
     }
+    
+    /**
+     * This function will solve all equations in a parenthesis
+     * 
+     * @param finalEquation This is the equation with parameters
+     * @return an equation with all equations in parenthesis solved
+     * @throws Calc.LogicalFormatException
+     * @throws Calc.InvalidEquationException
+     * @throws Calc.ArithmeticException
+     * @throws Calc.NoSuchVariableException
+     * @throws Calc.InequalityFormatException
+     * @throws Calc.InvalidNameException 
+     */
     private String handleParenthesis(String finalEquation) throws LogicalFormatException, InvalidEquationException, ArithmeticException, NoSuchVariableException, InequalityFormatException, InvalidNameException{ 
         int startPos = -1, endPos = -1;
         for(int i = 0; i<finalEquation.length(); i++){
@@ -833,6 +854,13 @@ public class Calc extends javax.swing.JFrame {
         return  finalEquation;
     }
     
+    /**
+     * This will return the value of the variable
+     * 
+     * @param var this the variable name
+     * @return the value of a variable if it exists else return the regular number
+     * @throws Calc.ArithmeticException 
+     */
     private String handleVariables(String var) throws ArithmeticException{
         int startPos = 0;
         int negate = 1;
@@ -853,7 +881,18 @@ public class Calc extends javax.swing.JFrame {
         return var;
     }
    
-    
+    /**
+     * This will solve the equation given
+     * 
+     * @param finalEquation this is the equation
+     * @return the answer to the equation
+     * @throws Calc.InvalidEquationException
+     * @throws Calc.ArithmeticException
+     * @throws Calc.NoSuchVariableException
+     * @throws Calc.LogicalFormatException
+     * @throws Calc.InequalityFormatException
+     * @throws Calc.InvalidNameException 
+     */
     private String evalEquation(String finalEquation) throws InvalidEquationException, ArithmeticException, NoSuchVariableException, LogicalFormatException, InequalityFormatException, InvalidNameException{
         List<String> operatorList = new ArrayList<>(Arrays.asList(finalEquation.split("(?<![\\w\\) ])\\-?[\\w.]+")));
         List<String> numbersList = new ArrayList<>(Arrays.asList(finalEquation.split("(?!^-)(?!(?<=[\\W])-)[^\\.\\w\\s]")));
@@ -997,6 +1036,13 @@ public class Calc extends javax.swing.JFrame {
         return handleVariables(numbersList.get(0));
     }
     
+    /**
+     * 
+     * @param str the string to check if the parenthesis is balanced
+     * @return true if it is balanced
+     * @throws Calc.InvalidEquationException if there is a closing parenthesis
+     *                                       without an opening parenthesis
+     */
     private boolean isBalanced(String str) throws InvalidEquationException{
         int i = 0;
         for(char s: str.toCharArray()){
@@ -1010,6 +1056,10 @@ public class Calc extends javax.swing.JFrame {
         return i == 0;
     }
     
+    
+    /**
+     * This states all the possible operations that could be used
+     */
     private enum Operators {
         ADD,    // + Addition
         SUB,    // - Subtraction
@@ -1036,7 +1086,7 @@ public class Calc extends javax.swing.JFrame {
         MMINUS, // -- minus one to variable
     };
     
-    
+
     class NoSuchVariableException extends Exception{
 
         public NoSuchVariableException() {
@@ -1089,7 +1139,19 @@ public class Calc extends javax.swing.JFrame {
 
     }
     
-    
+    /**
+     * This function will solve the two numbers given based on the operation specified
+     * 
+     * @param numbersList
+     * @param selPos
+     * @param a
+     * @return
+     * @throws Calc.NoSuchVariableException
+     * @throws Calc.ArithmeticException
+     * @throws Calc.LogicalFormatException
+     * @throws Calc.InequalityFormatException
+     * @throws Calc.InvalidNameException 
+     */
     private String calculateEquation(List<String> numbersList, int selPos, Operators a) 
             throws NoSuchVariableException, ArithmeticException, LogicalFormatException, InequalityFormatException, InvalidNameException{
         
