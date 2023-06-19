@@ -690,6 +690,10 @@ public class Calc extends javax.swing.JFrame {
         result.setText("");
     }//GEN-LAST:event_clearAllActionPerformed
 
+    /**
+     * This function will delete the last symbol
+     * It automatically removes two symbol wide operators and true or false symbols
+     */
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         int endModifier = 1;
         if (result.getText().equals(""))
@@ -707,6 +711,17 @@ public class Calc extends javax.swing.JFrame {
         result.setText(result.getText().substring(0, result.getText().length()-endModifier));
     }//GEN-LAST:event_deleteActionPerformed
 
+    /**
+     * This will clean the equation given to it
+     * It will remove all spaces and trailing operators
+     * Fix all multiplication with parenthesis
+     * and close all unbalanced parenthesis
+     * 
+     * @param finalEquation
+     * @return
+     * @throws Calc.LogicalFormatException
+     * @throws Calc.InvalidEquationException 
+     */
     private String cleanEquation(String finalEquation) throws LogicalFormatException, InvalidEquationException{
         // remove trailing operators and spaces.
         finalEquation = finalEquation.replaceAll("(?!\\+\\+|\\-\\-)[^\\w\\)\\.]+$(?<!\\+\\+|\\-\\-)| ", "");
@@ -722,7 +737,14 @@ public class Calc extends javax.swing.JFrame {
         
         return finalEquation;
     }
-    
+    /**
+     * This function will get the equation
+     * then clean it up using cleanEquation
+     * then save the cleaned equation as history
+     * then it will solve all the equations inside the parenthesis
+     * then it will solve everything in the parenthesis
+     * finally it will output the answer to the calculator
+     */
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
         String finalEquation = result.getText();
         String answer = "";
@@ -759,6 +781,11 @@ public class Calc extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_equalsActionPerformed
 
+    /**
+     * This handles all the buttons presses except CA, Del, (-) and =
+     * This function will output the pressed button label to the calculator
+     * It also automatically removes true or false values when a number is pressed
+     */
     private void buttonAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction
         if (!(evt.getSource() instanceof javax.swing.JButton))
             return;
@@ -773,6 +800,10 @@ public class Calc extends javax.swing.JFrame {
         
     }//GEN-LAST:event_buttonAction
 
+    /**
+     * This function will either wrap the number in a parenthesis
+     * and turn it into a negative or remove it those wrappings
+     */
     private void negationAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negationAction
         String[] numbers = result.getText().split("(?!^-)(?!(?<=[\\W])-)[^\\d\\.\\w\\s]");
         if (numbers.length == 0)
@@ -785,13 +816,16 @@ public class Calc extends javax.swing.JFrame {
             result.setText(newEquation.concat("(-").concat(lastNum).concat(")"));
     }//GEN-LAST:event_negationAction
 
+    /**
+     * This function will hide or show the history panel
+     */
     private void historyAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historyAction
         historyPanel.setVisible(!historyPanel.isVisible());
         historyList.setVisible(true);
     }//GEN-LAST:event_historyAction
 
     /**
-     * This fucntion will calculate the equation when ENTER is pressed
+     * This function will calculate the equation when ENTER is pressed
      */
     private void resultKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_resultKeyPressed
         if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
@@ -800,7 +834,7 @@ public class Calc extends javax.swing.JFrame {
     }//GEN-LAST:event_resultKeyPressed
 
     /**
-     * This shows an error message diaglog
+     * This shows an error message dialog
      * 
      * @param e this is the error message
      */
@@ -859,7 +893,7 @@ public class Calc extends javax.swing.JFrame {
      * 
      * @param var this the variable name
      * @return the value of a variable if it exists else return the regular number
-     * @throws Calc.ArithmeticException 
+     * @throws Calc.ArithmeticException if it tries to negate a boolean
      */
     private String handleVariables(String var) throws ArithmeticException{
         int startPos = 0;
