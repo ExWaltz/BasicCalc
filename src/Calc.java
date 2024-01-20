@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class Calc extends javax.swing.JFrame {
 
     /**
-     * Creates new form Calc
+     * Creates new form Calc HAHAHA
      */
     public Calc() {
         initComponents();
